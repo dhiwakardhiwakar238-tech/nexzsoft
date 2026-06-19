@@ -1,0 +1,36 @@
+.settings-page {
+  padding: 30px;
+  color: white;
+}
+
+.settings-card {
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 600px;
+}
+
+.settings-card label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.settings-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+}
+
+.settings-card button {
+  margin-top: 20px;
+  background: #22c55e;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}

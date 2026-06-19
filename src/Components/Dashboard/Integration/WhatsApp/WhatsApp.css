@@ -1,0 +1,293 @@
+.whatsapp-page {
+  display: grid;
+  grid-template-columns: 280px 1fr 340px;
+  height: calc(100vh - 80px);
+}
+
+.contact-panel {
+  background: #08111f;
+  border-right: 1px solid #1e293b;
+  overflow: auto;
+}
+
+.panel-header {
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid #1e293b;
+}
+
+.contact-card {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #162033;
+}
+
+.contact-card:hover {
+  background: #0f172a;
+}
+
+.contact-card h4 {
+  margin: 0;
+  color: white;
+}
+
+.contact-card p {
+  margin-top: 5px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  background: #020817;
+}
+
+.chat-header {
+  padding: 20px;
+  color: white;
+  border-bottom: 1px solid #1e293b;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+}
+
+.msg {
+  max-width: 250px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.customer {
+  background: #1e293b;
+  color: white;
+}
+
+.agent {
+  background: #22c55e;
+  color: white;
+  margin-left: auto;
+}
+
+.chat-footer {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+}
+
+.chat-footer input {
+  flex: 1;
+  background: #0f172a;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.chat-footer button {
+  background: #22c55e;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ai-panel {
+  background: #08111f;
+  border-left: 1px solid #1e293b;
+  padding: 20px;
+  overflow: auto;
+}
+
+.card {
+  background: #0f172a;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.card textarea,
+.card input {
+  width: 100%;
+  background: #020817;
+  border: 1px solid #1e293b;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.connect-btn,
+.save-btn {
+  width: 100%;
+  background: #22c55e;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ai-reply {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.toggle-row input {
+  width: auto;
+}
+
+.status-online {
+
+  background: #14532d;
+
+  color: #22c55e;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+}
+
+.status-offline {
+
+  background: #3f1d1d;
+
+  color: #ef4444;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+}
+
+.contact-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.unread-badge {
+
+  background: #22c55e;
+
+  color: white;
+
+  min-width: 24px;
+
+  height: 24px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.online-status {
+
+  color: #22c55e;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.offline-status {
+
+  color: #94a3b8;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.attach-btn {
+
+  background: #1e293b;
+
+  border: none;
+
+  color: white;
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.send-btn {
+
+  background: #22c55e;
+
+  border: none;
+
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.file-preview {
+
+  background: #1e293b;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  margin-top: 10px;
+
+  width: 250px;
+}
+
+.image-preview {
+
+  background: #334155;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  margin-top: 10px;
+
+  width: 250px;
+
+  text-align: center;
+}

@@ -1,0 +1,51 @@
+.profile-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  z-index:9998;
+}
+
+.profile-drawer{
+  position:fixed;
+  right:0;
+  top:0;
+
+  width:420px;
+  max-width:100vw;
+
+  height:100vh;
+
+  background:#0f172a;
+
+  padding:25px;
+
+  overflow-y:auto;
+
+  z-index:9999;
+
+  box-shadow:-10px 0 30px rgba(0,0,0,.3);
+}
+
+.close-btn{
+  position:absolute;
+  right:20px;
+  top:20px;
+
+  background:none;
+  border:none;
+
+  color:white;
+  font-size:20px;
+
+  cursor:pointer;
+}
+
+.profile-card{
+  background:#1e293b;
+
+  padding:15px;
+
+  border-radius:12px;
+
+  margin-top:12px;
+}

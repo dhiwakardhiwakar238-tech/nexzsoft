@@ -1,0 +1,88 @@
+.ai-intelligence-card {
+
+  margin-top: 25px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.ai-intelligence-card h2 {
+
+  margin-bottom: 20px;
+}
+
+.ai-conversation-item {
+
+  background: #1e293b;
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  margin-bottom: 15px;
+}
+
+.ai-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.intent {
+
+  background: #2563eb;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+.customer-message {
+
+  margin-top: 12px;
+
+  color: #cbd5e1;
+}
+
+.ai-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 15px;
+
+  margin-top: 15px;
+}
+
+.ai-grid span {
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.ai-grid h4 {
+
+  margin-top: 5px;
+}
+
+@media(max-width:768px){
+
+  .ai-grid{
+
+    grid-template-columns:1fr;
+  }
+
+}

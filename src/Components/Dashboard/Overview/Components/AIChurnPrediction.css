@@ -1,0 +1,78 @@
+.churn-card {
+
+  margin-top: 25px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.churn-card h2 {
+
+  margin-bottom: 20px;
+}
+
+.churn-item {
+
+  background: #1e293b;
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  margin-bottom: 15px;
+}
+
+.churn-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.risk-high {
+
+  background: #ef4444;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+.risk-medium {
+
+  background: #f59e0b;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+.risk-low {
+
+  background: #22c55e;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}

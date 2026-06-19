@@ -1,0 +1,48 @@
+.lead-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lead-modal {
+  width: 500px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+}
+
+.lead-modal h2 {
+  margin-bottom: 20px;
+}
+
+.lead-modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.save-lead-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

@@ -1,75 +1,142 @@
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+import DemoModal from "../DemoModal/DemoModal";
 
 function Navbar({ openAuth }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showSalesMenu, setShowSalesMenu] = useState(false);
+  const [showDemoModal, setShowDemoModal] = useState(false);
+
   return (
-    <header className="header">
+    <>
+      <header className="header">
 
-      {/* Logo */}
-      <div className="logo">
-        <Link to="/">
-          <img
-            src={logo}
-            alt="Nexzsoft Logo"
-            className="logo-img"
-          />
-        </Link>
-      </div>
-
-      {/* Navigation */}
-      <nav className="nav-menu">
-
-        <Link to="/">Home</Link>
-
-        <Link to="/solutions">
-          Solutions
-        </Link>
-
-        <Link to="/pricing">
-          Pricing
-        </Link>
-
-        {/* Resources Hub Dropdown */}
-        <div className="dropdown">
-          <button className="dropbtn">
-            Resources Hub ▼
-          </button>
-
-          <div className="dropdown-content">
-
-            <Link to="/about">
-              About Us
-            </Link>
-
-            <Link to="/partner">
-              Become a Partner
-            </Link>
-
-            <Link to="/toolkit">
-              Tool Kit
-            </Link>
-
-            <Link to="/support">
-              Support
-            </Link>
-
-          </div>
+        <div className="logo">
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Nexzsoft"
+              className="logo-img"
+            />
+          </Link>
         </div>
 
-        <Link to="/contact-sales">
-          Contact Sales
-        </Link>
-
-        <button
-          className="login-btn"
-          onClick={openAuth}
+        <div
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          Login / Signup
-        </button>
+          ☰
+        </div>
 
-      </nav>
-    </header>
+        <nav
+          className={`nav-menu ${menuOpen ? "active" : ""}`}
+        >
+          <Link to="/">Home</Link>
+
+          <Link to="/about">
+            About
+          </Link>
+
+          <Link to="/pricing">
+            Pricing
+          </Link>
+
+          <Link to="/resources">
+            Resources
+          </Link>
+
+          {/* CONTACT SALES */}
+
+          <div
+            className="contact-sales"
+            onMouseEnter={() => setShowSalesMenu(true)}
+          >
+            <button className="sales-btn">
+              Contact Sales ▼
+            </button>
+
+            {showSalesMenu && (
+              <div
+                className="sales-dropdown"
+                onMouseLeave={() =>
+                  setShowSalesMenu(false)
+                }
+              >
+                <div
+                  className="sales-item"
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/919876543210",
+                      "_blank"
+                    )
+                  }
+                >
+                  💬 WhatsApp Chat
+                </div>
+
+                <div
+                  className="sales-item"
+                  onClick={() =>
+                    window.location.href =
+                    "mailto:sales@nexzsoft.com"
+                  }
+                >
+                  📧 Email Us
+                </div>
+
+                <div
+                  className="sales-item"
+                  onClick={() =>
+                    window.location.href =
+                    "tel:+919876543210"
+                  }
+                >
+                  📞 Call Us
+                </div>
+
+                <div
+                  className="sales-item"
+                  onClick={() => {
+                    setShowDemoModal(true);
+                    setShowSalesMenu(false);
+                  }}
+                >
+                  🚀 Request a Demo
+                </div>
+              </div>
+            )}
+          </div>
+
+          <Link to="/dashboard">
+            Dashboard
+          </Link>
+
+          <button
+            className="login-btn"
+            onClick={openAuth}
+          >
+            Login
+          </button>
+
+          <button className="trial-btn">
+            Free Trial
+          </button>
+        </nav>
+      </header>
+
+      {/* DEMO MODAL */}
+
+      {showDemoModal && (
+        <DemoModal
+          closeModal={() =>
+            setShowDemoModal(false)
+          }
+        />
+      )}
+    </>
   );
 }
 

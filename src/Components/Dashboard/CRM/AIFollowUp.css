@@ -1,0 +1,87 @@
+.ai-followup-card {
+  margin-top: 25px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.followup-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.ai-live {
+  background: #22c55e;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+.ai-followup-card textarea {
+  width: 100%;
+
+  min-height: 220px;
+
+  resize: none;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  color: white;
+
+  padding: 15px;
+
+  border-radius: 12px;
+}
+
+.followup-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.followup-actions button {
+  flex: 1;
+
+  background: #22c55e;
+
+  border: none;
+
+  color: white;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.followup-actions button:hover {
+  opacity: 0.9;
+}
+
+@media(max-width:768px){
+
+  .followup-actions{
+    flex-direction: column;
+  }
+
+}

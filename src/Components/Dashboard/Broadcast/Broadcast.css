@@ -1,0 +1,58 @@
+.broadcast-page{
+  padding:30px;
+  color:white;
+}
+
+.broadcast-header{
+  margin-bottom:25px;
+}
+
+.broadcast-card{
+  background:#0f172a;
+  padding:25px;
+  border-radius:15px;
+}
+
+.broadcast-card label{
+  display:block;
+  margin-bottom:8px;
+  margin-top:15px;
+}
+
+.broadcast-card input,
+.broadcast-card textarea{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#1e293b;
+  color:white;
+}
+
+.broadcast-card textarea{
+  min-height:140px;
+}
+
+.broadcast-btn{
+  margin-top:20px;
+  background:#22c55e;
+  border:none;
+  color:white;
+  padding:12px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.preview-card{
+  margin-top:25px;
+  background:#0f172a;
+  padding:25px;
+  border-radius:15px;
+}
+
+.preview-box{
+  margin-top:15px;
+  background:#020617;
+  padding:20px;
+  border-radius:10px;
+}

@@ -1,0 +1,92 @@
+.proposal-card {
+  margin-top: 25px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.proposal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.generate-btn {
+  background: #22c55e;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.proposal-card textarea {
+  width: 100%;
+
+  min-height: 280px;
+
+  resize: none;
+
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  color: white;
+
+  padding: 15px;
+
+  border-radius: 12px;
+}
+
+.proposal-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.proposal-actions button {
+  flex: 1;
+
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+
+  .proposal-header{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .proposal-actions{
+    flex-direction: column;
+  }
+
+}

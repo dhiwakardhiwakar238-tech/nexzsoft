@@ -1,0 +1,26 @@
+.tickets-page {
+  padding: 30px;
+  color: white;
+}
+
+.ticket-table {
+  background: #0f172a;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.ticket-head,
+.ticket-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  padding: 15px;
+}
+
+.ticket-head {
+  background: #1e293b;
+  font-weight: bold;
+}
+
+.ticket-row {
+  border-top: 1px solid #334155;
+}

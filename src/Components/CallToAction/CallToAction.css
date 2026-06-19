@@ -1,0 +1,41 @@
+.cta {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  text-align: center;
+}
+
+.cta .container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+.cta p {
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 12px 24px;
+  background: white;
+  color: #2563eb;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}

@@ -1,0 +1,94 @@
+.copilot-card {
+  margin-top: 25px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 22px;
+}
+
+.copilot-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.ai-badge {
+  background: #22c55e;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.copilot-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.copilot-box {
+  background: #1e293b;
+
+  padding: 18px;
+
+  border-radius: 12px;
+}
+
+.copilot-box span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.copilot-box h2 {
+  margin-top: 10px;
+  color: #22c55e;
+}
+
+.insight-card {
+  background: #1e293b;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+}
+
+.insight-card h4 {
+  margin-bottom: 8px;
+}
+
+.insight-card p {
+  color: #cbd5e1;
+}
+
+.risk {
+  border-left: 4px solid #ef4444;
+}
+
+@media(max-width:768px){
+
+  .copilot-grid{
+    grid-template-columns:1fr;
+  }
+
+}

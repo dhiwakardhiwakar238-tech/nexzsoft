@@ -1,54 +1,78 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-grid">
 
-        {/* Company */}
-        <div className="footer-col">
+      <div className="footer-glow"></div>
+
+      <div className="footer-container">
+
+        {/* Brand */}
+        <div className="footer-brand">
           <h2>Nexzsoft</h2>
 
           <p>
-            AI-powered customer engagement platform
-            for modern businesses.
+            Empowering businesses with AI, Automation,
+            Customer Engagement, and Digital Transformation.
           </p>
+
+          <div className="footer-badges">
+            <span>AI Powered</span>
+            <span>Secure</span>
+            <span>24/7 Support</span>
+          </div>
         </div>
 
         {/* Quick Links */}
-        <div className="footer-col">
+        <div className="footer-column">
           <h3>Quick Links</h3>
 
-          <a href="/">Home</a>
-          <a href="/solutions">Solutions</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/about">About Us</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/pricing">Pricing</Link>
+          <Link to="/resources">Resources</Link>
         </div>
 
-        {/* Resources */}
-        <div className="footer-col">
-          <h3>Resources</h3>
+        {/* Legal */}
+        <div className="footer-column">
+          <h3>Legal</h3>
 
-          <a href="/toolkit">Tool Kit</a>
-          <a href="/support">Support</a>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms & Conditions</a>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/terms">Terms & Conditions</Link>
+          <Link to="/cookie-policy">Cookie Policy</Link>
+          <Link to="/refund-policy">Refund Policy</Link>
+          <Link to="/security-policy">Security Policy</Link>
         </div>
 
         {/* Contact */}
-        <div className="footer-col">
+        <div className="footer-column">
           <h3>Contact</h3>
 
           <p>📧 info@nexzsoft.com</p>
           <p>📞 +91 9876543210</p>
-          <p>📍 Chennai, India</p>
+          <p>📍 Chennai, Tamil Nadu, India</p>
+
+          <div className="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+          </div>
         </div>
 
       </div>
 
       <div className="footer-bottom">
-        © 2026 Nexzsoft. All Rights Reserved.
+        <p>
+          © 2026 Nexzsoft. All Rights Reserved.
+        </p>
+
+        <p>
+          Built with Innovation • Powered by AI
+        </p>
       </div>
+
     </footer>
   );
 }

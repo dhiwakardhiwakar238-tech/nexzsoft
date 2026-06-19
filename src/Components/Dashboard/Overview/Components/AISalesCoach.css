@@ -1,0 +1,72 @@
+.sales-coach-card {
+
+  margin-top: 25px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.sales-coach-card h2 {
+
+  margin-bottom: 20px;
+}
+
+.sales-review {
+
+  background: #1e293b;
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  margin-bottom: 15px;
+}
+
+.sales-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.score-high {
+
+  background: #22c55e;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+}
+
+.score-medium {
+
+  background: #f59e0b;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+}
+
+.score-low {
+
+  background: #ef4444;
+
+  color: white;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+}

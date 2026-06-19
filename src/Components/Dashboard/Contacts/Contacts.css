@@ -1,0 +1,51 @@
+.contacts-page{
+  padding:30px;
+  color:white;
+}
+
+.contacts-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.add-contact-btn{
+  background:#22c55e;
+  border:none;
+  color:white;
+  padding:12px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.contacts-table{
+  background:#0f172a;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.table-head{
+  display:grid;
+  grid-template-columns:2fr 2fr 2fr 1fr;
+  background:#1e293b;
+  padding:18px;
+  font-weight:bold;
+}
+
+.table-row{
+  display:grid;
+  grid-template-columns:2fr 2fr 2fr 1fr;
+  padding:18px;
+  border-bottom:1px solid #1e293b;
+  align-items:center;
+}
+
+.table-row button{
+  background:#3b82f6;
+  border:none;
+  color:white;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+}

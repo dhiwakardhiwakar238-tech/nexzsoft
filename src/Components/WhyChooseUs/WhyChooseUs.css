@@ -1,0 +1,33 @@
+.why-choose-us {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.why-choose-us .container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.why-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}

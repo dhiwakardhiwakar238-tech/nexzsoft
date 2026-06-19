@@ -238,21 +238,149 @@
   }
 }
 
+
+.header {
+  backdrop-filter: blur(15px);
+  background: rgba(2, 6, 23, 0.92);
+}
+
+.logo-img {
+  transition: 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.trial-btn {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #22c55e
+  );
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.trial-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+
+  font-size: 28px;
+  color: white;
+
+  cursor: pointer;
+}
+
+
+.contact-sales {
+  position: relative;
+}
+
+.sales-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sales-btn:hover {
+  color: #22c55e;
+}
+
+.sales-dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+
+  width: 260px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  padding: 12px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+
+  z-index: 9999;
+}
+
+.sales-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.sales-item:hover {
+  background: #f3f4f6;
+  transform: translateX(5px);
+}
+
+
 /* =========================
    SMALL MOBILE
 ========================= */
+@media screen and (max-width:768px) {
 
-@media screen and (max-width: 480px) {
-  .logo-img {
-    height: 60px;
+  .hamburger {
+    display: block;
   }
 
-  .nav-menu a,
-  .dropbtn {
-    font-size: 13px;
+  .nav-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: #020617;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    gap: 15px;
   }
 
-  .dropdown-content {
-    min-width: 180px;
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .login-btn,
+  .trial-btn {
+    width: 100%;
   }
 }

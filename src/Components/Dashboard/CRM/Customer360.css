@@ -1,0 +1,55 @@
+.customer360-card {
+  margin-top: 25px;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.customer360-card h3 {
+  margin-bottom: 20px;
+}
+
+.customer360-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.customer-box {
+  background: #1e293b;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.customer-box span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.customer-box h2 {
+  margin-top: 10px;
+  color: #22c55e;
+}
+
+.customer-health {
+  margin-top: 25px;
+}
+
+.health-bar {
+  height: 12px;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.health-fill {
+  height: 100%;
+  background: #22c55e;
+}
+
+.customer-health p {
+  margin-top: 10px;
+  color: #94a3b8;
+}

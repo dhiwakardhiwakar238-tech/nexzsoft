@@ -1,0 +1,50 @@
+.topbar {
+  height: 80px;
+  background: #08111f;
+  border-bottom: 1px solid #1e293b;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 25px;
+}
+
+.topbar-left h1 {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+}
+
+.topbar-left p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.status-badge {
+  background: rgba(34,197,94,.15);
+  color: #22c55e;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.logout-btn {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}

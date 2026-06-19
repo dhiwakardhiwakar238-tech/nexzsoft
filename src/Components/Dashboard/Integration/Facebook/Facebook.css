@@ -1,0 +1,50 @@
+.facebook-page{
+  padding:30px;
+  color:white;
+}
+
+.facebook-card{
+  background:#0f172a;
+  padding:30px;
+  border-radius:15px;
+  margin-bottom:20px;
+}
+
+.facebook-card h1{
+  margin-bottom:15px;
+}
+
+.facebook-card p{
+  color:#94a3b8;
+}
+
+.fb-btn{
+  margin-top:20px;
+  background:#1877f2;
+  border:none;
+  color:white;
+  padding:12px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.facebook-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.stat-card{
+  background:#0f172a;
+  padding:25px;
+  border-radius:15px;
+}
+
+.stat-card h3{
+  margin-bottom:10px;
+}
+
+.stat-card span{
+  font-size:28px;
+  font-weight:bold;
+}

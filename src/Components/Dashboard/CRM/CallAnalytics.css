@@ -1,0 +1,97 @@
+.call-card {
+  margin-top: 25px;
+
+  background: #111827;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.call-header {
+  margin-bottom: 20px;
+}
+
+.call-item {
+  background: #1e293b;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  margin-bottom: 15px;
+}
+
+.call-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.duration {
+  color: #94a3b8;
+}
+
+.call-sentiment {
+  margin-bottom: 12px;
+}
+
+.positive {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.neutral {
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.call-summary,
+.next-action {
+  margin-bottom: 12px;
+}
+
+.call-summary p,
+.next-action p {
+  color: #cbd5e1;
+  margin-top: 5px;
+}
+
+.call-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.call-actions button {
+  background: #2563eb;
+
+  border: none;
+
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+
+  .call-top{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .call-actions{
+    flex-direction: column;
+  }
+
+}

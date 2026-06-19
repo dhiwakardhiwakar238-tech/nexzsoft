@@ -1,0 +1,26 @@
+.demo-page {
+  padding: 30px;
+  color: white;
+}
+
+.demo-table {
+  background: #0f172a;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.demo-head,
+.demo-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px;
+}
+
+.demo-head {
+  background: #1e293b;
+  font-weight: 700;
+}
+
+.demo-row {
+  border-top: 1px solid #334155;
+}

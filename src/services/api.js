@@ -1,85 +1,129 @@
-const API_URL = "http://127.0.0.1:8000";
+// Temporary Mock API Service
 
-// LOGIN API
-export const loginUser = async (
-  email,
-  password
-) => {
-  try {
-    const response = await fetch(
-      `${API_URL}/login`,
-      {
-        method: "POST",
-
-        headers: {
-          "Content-Type":
-            "application/json",
-        },
-
-        body: JSON.stringify({
-          email,
-          password,
-        }),
+// Login API
+export const loginUser = async (email, password) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (
+        email === "admin@nexzsoft.com" &&
+        password === "123456"
+      ) {
+        resolve({
+          success: true,
+          token: "mock-jwt-token",
+          user: {
+            id: 1,
+            name: "Dhiwakar",
+            email: "admin@nexzsoft.com",
+            role: "admin",
+          },
+        });
+      } else {
+        reject({
+          success: false,
+          message: "Invalid credentials",
+        });
       }
-    );
-
-    const data =
-      await response.json();
-
-    return data;
-  } catch (error) {
-    console.error(
-      "Login Error:",
-      error
-    );
-
-    return null;
-  }
+    }, 1000);
+  });
 };
 
-// SIGNUP API
-export const signupUser =
-  async (form) => {
-    try {
-      const response =
-        await fetch(
-          `${API_URL}/signup`,
-          {
-            method: "POST",
+// Profile API
+export const getProfile = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        name: "Dhiwakar",
+        email: "admin@nexzsoft.com",
+        company: "Nexzsoft",
+        phone: "+91 9876543210",
+      });
+    }, 1000);
+  });
+};
 
-            headers: {
-              "Content-Type":
-                "application/json",
-            },
+// Analytics API
+export const getAnalytics = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        totalMessages: 12450,
+        customers: 1250,
+        accuracy: "98%",
+        automation: "24/7",
+      });
+    }, 1000);
+  });
+};
 
-            body: JSON.stringify({
-              name: form.name,
+// Contacts API
+export const getContacts = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {
+          id: 1,
+          name: "Arun",
+          phone: "+91 9876543210",
+        },
+        {
+          id: 2,
+          name: "Kumar",
+          phone: "+91 9876501234",
+        },
+        {
+          id: 3,
+          name: "Priya",
+          phone: "+91 9876549999",
+        },
+      ]);
+    }, 1000);
+  });
+};
 
-              company_name:
-                form.company_name,
+// WhatsApp API
+export const getWhatsAppStatus = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        connected: false,
+        qr: "QR_CODE_PLACEHOLDER",
+      });
+    }, 1000);
+  });
+};
 
-              whatsapp_number:
-                form.code +
-                form.whatsapp,
+// PDF Upload API
+export const uploadPDF = async (file) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (file) {
+        resolve({
+          success: true,
+          fileName: file.name,
+        });
+      } else {
+        reject({
+          success: false,
+          message: "No file selected",
+        });
+      }
+    }, 2000);
+  });
+};
 
-              email: form.email,
-
-              password:
-                form.password,
-            }),
-          }
-        );
-
-      const data =
-        await response.json();
-
-      return data;
-    } catch (error) {
-      console.error(
-        "Signup Error:",
-        error
-      );
-
-      return null;
-    }
-  };
+// Signup API
+export const signupUser = async (userData) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        success: true,
+        message: "Signup successful",
+        user: {
+          id: Date.now(),
+          ...userData,
+        },
+      });
+    }, 1000);
+  });
+};

@@ -1,0 +1,1422 @@
+/* =========================================================
+   AI STUDIO
+========================================================= */
+
+.knowledge-page {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 10px 34px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.knowledge-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.knowledge-header h2 {
+
+    margin: 0;
+
+    color: #101828;
+
+    font-size: 27px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.knowledge-header p {
+
+    margin: 7px 0 0;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+.upload-btn {
+    height: 40px;
+
+    padding: 0 16px;
+
+    border: 1px solid #4F46E5;
+
+    border-radius: 9px;
+
+    background: #4F46E5;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.upload-btn svg {
+    width: 17px;
+
+    height: 17px;
+
+    flex-shrink: 0;
+
+    display: block;
+}
+
+
+.upload-btn:hover {
+    background: #4338CA;
+
+    border-color: #4338CA;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BUSINESS INFORMATION
+========================================================= */
+
+.business-info-card,
+.website-knowledge-card {
+    background: #ffffff;
+    border: 1px solid #E4E7EC;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.business-info-header,
+.website-knowledge-header {
+    padding: 20px 22px;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.business-info-title,
+.website-knowledge-title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.business-info-icon,
+.website-knowledge-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #EEF2FF;
+    color: #4F46E5;
+    font-size: 17px;
+}
+
+.business-info-header h3,
+.website-knowledge-header h3 {
+    margin: 0;
+    color: #101828;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.business-info-header p,
+.website-knowledge-header p {
+    margin: 4px 0 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.business-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.business-info-field {
+    min-width: 0;
+    padding: 16px 22px;
+    border-bottom: 1px solid #F2F4F7;
+}
+
+.business-info-field:nth-child(odd):not(.business-info-field-full) {
+    border-right: 1px solid #F2F4F7;
+}
+
+.business-info-field-full {
+    grid-column: 1 / -1;
+}
+
+.business-info-field label,
+.website-input-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #344054;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.business-info-field input,
+.business-info-field select,
+.business-info-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #344054;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.business-info-field input,
+.business-info-field select {
+    height: 38px;
+    padding: 0 11px;
+}
+
+.business-info-field textarea {
+    min-height: 82px;
+    padding: 10px 11px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.business-info-field input:focus,
+.business-info-field select:focus,
+.business-info-field textarea:focus,
+.website-input-wrapper:focus-within {
+    border-color: #6366F1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+.business-info-help {
+    display: block;
+    margin-top: 5px;
+    color: #98A2B3;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   WEBSITE KNOWLEDGE
+========================================================= */
+
+.website-knowledge-body {
+    padding: 18px 22px 20px;
+}
+
+.website-input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.website-input-wrapper {
+    min-width: 0;
+    flex: 1;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 11px;
+    box-sizing: border-box;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    background: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.website-input-wrapper svg {
+    flex-shrink: 0;
+    color: #98A2B3;
+    font-size: 15px;
+}
+
+.website-input-wrapper input {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #344054;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.website-input-wrapper input::placeholder { color: #98A2B3; }
+
+.website-import-btn,
+.website-sync-btn {
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid #4F46E5;
+    border-radius: 8px;
+    background: #4F46E5;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.website-import-btn:hover:not(:disabled),
+.website-sync-btn:hover {
+    background: #4338CA;
+    border-color: #4338CA;
+    transform: translateY(-1px);
+}
+
+.website-import-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.website-import-btn svg,
+.website-sync-btn svg { width: 15px; height: 15px; }
+
+.website-knowledge-description {
+    margin: 8px 0 0;
+    color: #98A2B3;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.website-status-panel {
+    margin-top: 18px;
+    padding: 14px;
+    border: 1px solid #D1FADF;
+    border-radius: 10px;
+    background: #F6FEF9;
+}
+
+.website-status-main { display: flex; align-items: center; gap: 10px; }
+
+.website-status-icon {
+    width: 30px; height: 30px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: #16A34A; font-size: 19px;
+}
+
+.website-status-main strong { display: block; color: #166534; font-size: 12px; font-weight: 700; }
+.website-status-main span { display: block; margin-top: 2px; color: #667085; font-size: 10px; }
+
+.website-status-details {
+    display: flex; align-items: center; gap: 28px;
+    margin-top: 14px; padding-top: 13px;
+    border-top: 1px solid #D1FADF;
+}
+
+.website-status-item { min-width: 120px; }
+.website-status-item span { display: block; color: #667085; font-size: 10px; }
+.website-status-item strong { display: block; margin-top: 3px; color: #344054; font-size: 12px; font-weight: 600; }
+
+.website-sync-btn {
+    margin-left: auto; height: 34px; padding: 0 11px;
+    background: #ffffff; border-color: #D0D5DD; color: #344054;
+}
+
+.website-sync-btn:hover { background: #F9FAFB; border-color: #98A2B3; color: #101828; }
+
+/* =========================================================
+   SETTINGS CARD
+========================================================= */
+
+.ai-settings-card {
+
+    background: #ffffff;
+
+    border: 1px solid #E4E7EC;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+}
+
+
+.ai-settings-header {
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #EAECF0;
+
+}
+
+
+.ai-settings-header h3 {
+
+    margin: 0;
+
+    color: #101828;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+.ai-settings-header p {
+
+    margin: 5px 0 0;
+
+    color: #667085;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   SETTINGS GRID
+========================================================= */
+
+.ai-settings-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 0;
+
+}
+
+
+.ai-setting {
+
+    min-height: 72px;
+
+    padding: 16px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    border-bottom: 1px solid #F2F4F7;
+
+}
+
+
+.ai-setting:nth-child(odd) {
+
+    border-right: 1px solid #F2F4F7;
+
+}
+
+
+.ai-setting-label {
+
+    min-width: 0;
+
+}
+
+
+.ai-setting-label strong {
+
+    display: block;
+
+    color: #344054;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.ai-setting-label span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #98A2B3;
+
+    font-size: 11px;
+
+}
+
+
+.ai-setting select {
+
+    width: 145px;
+
+    height: 36px;
+
+    padding: 0 10px;
+
+    border: 1px solid #D0D5DD;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #344054;
+
+    font-size: 12px;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+.ai-setting select:focus {
+
+    border-color: #6366F1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.08);
+
+}
+
+
+/* =========================================================
+   CREATIVITY SLIDER
+========================================================= */
+
+.ai-creativity {
+
+    width: 145px;
+
+}
+
+
+.ai-creativity-slider {
+
+    width: 100%;
+
+    accent-color: #4F46E5;
+
+    cursor: pointer;
+
+}
+
+
+.ai-creativity-labels {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 2px;
+
+    color: #98A2B3;
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================================
+   KNOWLEDGE CARD
+========================================================= */
+
+.knowledge-table {
+
+    background: #ffffff;
+
+    border: 1px solid #E4E7EC;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: none;
+
+}
+
+
+.knowledge-section-header {
+
+    padding: 20px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #EAECF0;
+
+}
+
+
+.knowledge-section-header h3 {
+
+    margin: 0;
+
+    color: #101828;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+.knowledge-section-header p {
+
+    margin: 4px 0 0;
+
+    color: #667085;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   KNOWLEDGE TABS
+========================================================= */
+
+.knowledge-tabs {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 0 22px;
+
+    border-bottom: 1px solid #EAECF0;
+
+}
+
+
+.knowledge-tab {
+
+    position: relative;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 13px 10px;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.knowledge-tab.active {
+
+    color: #4F46E5;
+
+}
+
+
+.knowledge-tab.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    height: 2px;
+
+    background: #4F46E5;
+
+    border-radius: 2px;
+
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.knowledge-table-header {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 3fr)
+        0.8fr
+        0.8fr
+        1fr
+        80px;
+
+    align-items: center;
+
+    min-height: 44px;
+
+    padding: 0 22px;
+
+    background: #F9FAFB;
+
+    color: #667085;
+
+    border-bottom: 1px solid #EAECF0;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+}
+
+
+.knowledge-row {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 3fr)
+        0.8fr
+        0.8fr
+        1fr
+        80px;
+
+    align-items: center;
+
+    min-height: 68px;
+
+    padding: 0 22px;
+
+    border-bottom: 1px solid #F2F4F7;
+
+    transition:
+        background 0.15s ease;
+
+}
+
+
+.knowledge-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.knowledge-row:hover {
+
+    background: #FAFBFF;
+
+}
+
+
+.knowledge-row span {
+
+    color: #475467;
+
+    font-size: 12px;
+
+}
+
+
+.knowledge-row span:first-child {
+
+    color: #101828;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   DOCUMENT NAME
+========================================================= */
+
+.knowledge-document {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+
+}
+
+
+.knowledge-document-icon {
+
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #EEF2FF;
+
+    color: #4F46E5;
+
+}
+
+
+.knowledge-document-name {
+
+    min-width: 0;
+
+}
+
+
+.knowledge-document-name strong {
+
+    display: block;
+
+    color: #101828;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.knowledge-document-name span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #98A2B3;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-ready {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #15803D;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.status-ready::before {
+
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22C55E;
+
+}
+
+
+.status-processing {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #B45309;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.status-processing::before {
+
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #F59E0B;
+
+}
+
+
+.status-failed {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #B91C1C;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.status-failed::before {
+
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #EF4444;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.knowledge-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+
+}
+
+
+.reindex-btn,
+.delete-btn {
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    border: 1px solid transparent;
+
+}
+
+
+.reindex-btn {
+
+    background: #EEF2FF;
+
+    color: #4338CA;
+
+}
+
+
+.reindex-btn:hover {
+
+    background: #E0E7FF;
+
+}
+
+
+.delete-btn {
+
+    background: #FEF2F2;
+
+    color: #DC2626;
+
+}
+
+
+.delete-btn:hover {
+
+    background: #FEE2E2;
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.knowledge-empty {
+
+    min-height: 300px;
+
+    padding: 50px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+.empty-icon {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #F2F4F7;
+
+    font-size: 24px;
+
+}
+
+
+.knowledge-empty h3 {
+
+    margin: 7px 0 0;
+
+    color: #101828;
+
+    font-size: 14px;
+
+}
+
+
+.knowledge-empty p {
+
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   UPLOAD PROGRESS
+========================================================= */
+
+.upload-progress {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    margin-top: 16px;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 6px;
+
+    background: #EAECF0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-fill {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #4F46E5;
+
+    animation: loading 1.2s linear infinite;
+
+}
+
+
+.upload-progress p {
+
+    margin: 7px 0 0;
+
+    color: #667085;
+
+    font-size: 11px;
+
+}
+
+
+@keyframes loading {
+
+    0% {
+
+        transform: translateX(-100%);
+
+    }
+
+    100% {
+
+        transform: translateX(100%);
+
+    }
+
+}
+
+
+/* =========================================================
+   AI INSTRUCTIONS
+========================================================= */
+
+.ai-instructions-card {
+
+    background: #ffffff;
+
+    border: 1px solid #E4E7EC;
+
+    border-radius: 14px;
+
+    padding: 20px 22px;
+
+}
+
+
+.ai-instructions-card h3 {
+
+    margin: 0;
+
+    color: #101828;
+
+    font-size: 15px;
+
+}
+
+
+.ai-instructions-card p {
+
+    margin: 5px 0 14px;
+
+    color: #667085;
+
+    font-size: 12px;
+
+}
+
+
+.ai-instructions-card textarea {
+
+    width: 100%;
+
+    min-height: 130px;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    padding: 12px;
+
+    border: 1px solid #D0D5DD;
+
+    border-radius: 9px;
+
+    color: #344054;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    outline: none;
+
+}
+
+
+.ai-instructions-card textarea:focus {
+
+    border-color: #6366F1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.08);
+
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-row {
+
+    padding: 15px 22px;
+
+    border-bottom: 1px solid #F2F4F7;
+
+}
+
+
+.faq-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.faq-question {
+
+    color: #101828;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.faq-answer {
+
+    margin-top: 5px;
+
+    color: #667085;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .business-info-grid { grid-template-columns: 1fr; }
+
+    .business-info-field:nth-child(odd):not(.business-info-field-full) {
+        border-right: none;
+    }
+
+    .business-info-field-full { grid-column: auto; }
+
+    .ai-settings-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .ai-setting:nth-child(odd) {
+
+        border-right: none;
+
+    }
+
+    .knowledge-table {
+
+        overflow-x: auto;
+
+    }
+
+    .knowledge-table-header,
+    .knowledge-row {
+
+        min-width: 850px;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .knowledge-page {
+
+        padding: 20px 15px 40px;
+
+    }
+
+    .business-info-header,
+    .website-knowledge-header {
+        padding: 18px;
+    }
+
+    .business-info-field { padding: 15px 18px; }
+
+    .website-knowledge-body { padding: 16px 18px 18px; }
+
+    .website-input-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .website-import-btn { width: fit-content; }
+
+    .website-status-details {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .website-sync-btn { margin-left: 0; }
+
+    .knowledge-header {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .upload-btn {
+
+        width: fit-content;
+
+    }
+
+    .ai-setting {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+    .ai-setting select,
+    .ai-creativity {
+
+        width: 100%;
+
+    }
+
+}

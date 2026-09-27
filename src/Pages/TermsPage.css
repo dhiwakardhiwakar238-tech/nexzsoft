@@ -1,0 +1,186 @@
+.terms-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px;
+
+    background: #ffffff;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    line-height: 1.8;
+    color: #333333;
+
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+.policy-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #475569;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.policy-home:hover {
+    color: #6c3cff;
+    transform: translateX(-3px);
+}
+
+.policy-home svg {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.terms-container h1 {
+    margin: 0 0 20px;
+
+    font-size: 38px;
+    line-height: 1.25;
+
+    color: #0f172a;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.terms-container h2 {
+    margin-top: 38px;
+    margin-bottom: 14px;
+
+    font-size: 25px;
+    line-height: 1.35;
+
+    color: #1e293b;
+    font-weight: 650;
+}
+
+.terms-container h3 {
+    margin-top: 24px;
+    margin-bottom: 10px;
+
+    font-size: 19px;
+    line-height: 1.4;
+
+    color: #334155;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+.terms-container p {
+    margin: 0 0 16px;
+
+    color: #475569;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.terms-container ul {
+    margin: 0 0 22px;
+    padding-left: 28px;
+}
+
+.terms-container li {
+    margin-bottom: 9px;
+
+    color: #475569;
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   STRONG TEXT
+   ========================================================= */
+
+.terms-container strong {
+    color: #1e293b;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .terms-container {
+        margin: 20px;
+        padding: 25px;
+
+        border-radius: 12px;
+    }
+
+    .terms-container h1 {
+        font-size: 30px;
+    }
+
+    .terms-container h2 {
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+    .terms-container h3 {
+        font-size: 18px;
+    }
+
+    .terms-container p,
+    .terms-container li {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .terms-container {
+        margin: 12px;
+        padding: 20px;
+    }
+
+    .terms-container h1 {
+        font-size: 27px;
+    }
+
+    .terms-container h2 {
+        font-size: 20px;
+    }
+
+    .policy-home {
+        font-size: 14px;
+    }
+}

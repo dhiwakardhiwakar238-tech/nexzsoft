@@ -1,63 +1,284 @@
+/* =========================================================
+   PRIVACY POLICY PAGE
+   ========================================================= */
+
 .policy-page {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  line-height: 1.8;
+    width: min(1100px, calc(100% - 40px));
+    margin: 50px auto;
+    padding: 48px 56px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.08);
+
+    color: #334155;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   HOME LINK
+   ========================================================= */
+
+.policy-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 30px;
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.policy-home:hover {
+    color: #2563eb;
+    transform: translateX(-3px);
+}
+
+.policy-home svg {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
 
 .policy-page h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: #111827;
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    letter-spacing: -0.7px;
 }
 
+
+/* =========================================================
+   LAST UPDATED
+   ========================================================= */
+
+.policy-updated {
+    margin-bottom: 34px !important;
+
+    color: #64748b !important;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
 .policy-page h2 {
-  margin-top: 35px;
-  margin-bottom: 12px;
-  color: #1e293b;
-  font-size: 26px;
+    margin-top: 42px;
+    margin-bottom: 14px;
+
+    padding-top: 4px;
+
+    color: #1e293b;
+
+    font-size: 25px;
+    line-height: 1.35;
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
 }
 
 .policy-page h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #334155;
-  font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    color: #334155;
+
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 650;
 }
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
 
 .policy-page p {
-  color: #475569;
-  margin-bottom: 15px;
+    margin: 0 0 17px;
+
+    color: #475569;
+
+    font-size: 15px;
+    line-height: 1.85;
 }
 
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
 .policy-page ul {
-  padding-left: 25px;
-  margin-bottom: 20px;
+    margin: 0 0 22px;
+    padding-left: 24px;
 }
 
 .policy-page li {
-  margin-bottom: 8px;
-  color: #475569;
+    margin-bottom: 8px;
+
+    color: #475569;
+
+    line-height: 1.75;
 }
 
+.policy-page li::marker {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   STRONG TEXT
+   ========================================================= */
+
+.policy-page strong {
+    color: #334155;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+.policy-contact {
+    margin-top: 18px;
+    padding: 20px 22px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.policy-contact p {
+    margin-bottom: 8px;
+}
+
+.policy-contact p:last-child {
+    margin-bottom: 0;
+}
+
+.policy-contact a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.policy-contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 768px) {
-  .policy-page {
-    margin: 20px;
-    padding: 25px;
-  }
 
-  .policy-page h1 {
-    font-size: 30px;
-  }
+    .policy-page {
+        width: calc(100% - 24px);
 
-  .policy-page h2 {
-    font-size: 22px;
-  }
+        margin: 18px auto;
+        padding: 28px 22px;
 
-  .policy-page h3 {
-    font-size: 18px;
-  }
+        border-radius: 14px;
+    }
+
+    .policy-page h1 {
+        font-size: 30px;
+    }
+
+    .policy-page h2 {
+        margin-top: 34px;
+
+        font-size: 22px;
+    }
+
+    .policy-page h3 {
+        font-size: 17px;
+    }
+
+    .policy-page p,
+    .policy-page li {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .policy-updated {
+        margin-bottom: 26px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .policy-page {
+        width: calc(100% - 16px);
+
+        padding: 24px 17px;
+    }
+
+    .policy-page h1 {
+        font-size: 27px;
+    }
+
+    .policy-page h2 {
+        font-size: 20px;
+    }
+
+    .policy-page h3 {
+        font-size: 16px;
+    }
+
+    .policy-page ul {
+        padding-left: 20px;
+    }
+
+    .policy-contact {
+        padding: 16px;
+    }
 }

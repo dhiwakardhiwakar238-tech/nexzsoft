@@ -1,0 +1,93 @@
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.auth-box {
+  width: 450px;
+  max-width: 95%;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  border: none;
+  background: none;
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.auth-box input {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  background: #22c55e;
+
+  color: black;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.switch-auth {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.switch-auth span {
+  color: #22c55e;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .auth-box {
+    width: 95%;
+    padding: 25px;
+  }
+}

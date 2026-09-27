@@ -1,0 +1,174 @@
+.wa-card {
+  width: 100%;
+  max-width: 760px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ececec;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.wa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wa-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.connected-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #effdf4;
+  color: #22a447;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.green-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.wa-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.wa-details {
+  flex: 1;
+}
+
+.detail-item {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  color: #7d7d7d;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.detail-item h4 {
+  margin: 0;
+  color: #202020;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.api-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #22a447;
+  font-weight: 600;
+}
+
+.wa-icon-wrapper {
+  width: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-bg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #f2fff6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-bg::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #e6fced;
+}
+
+.icon-inner {
+  position: relative;
+  z-index: 1;
+  width: 90px;
+  height: 90px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-inner svg {
+  font-size: 55px;
+  color: white;
+}
+
+.wa-footer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wa-footer p {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+.disconnect-btn {
+  background: white;
+  color: #ef4444;
+  border: 1.5px solid #ef4444;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.disconnect-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .wa-body {
+    flex-direction: column;
+    text-align: left;
+    gap: 24px;
+  }
+
+  .wa-header,
+  .wa-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .wa-icon-wrapper {
+    width: 100%;
+  }
+
+  .disconnect-btn {
+    width: 100%;
+  }
+}

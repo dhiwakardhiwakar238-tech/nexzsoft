@@ -1,0 +1,601 @@
+/* =========================================================
+   NEXZSOFT — ENTERPRISE DASHBOARD
+   DashboardV2.css
+   ========================================================= */
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background: #f5f7fb;
+  color: #111827;
+}
+
+
+/* =========================
+   DASHBOARD SHELL
+   ========================= */
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(99, 102, 241, 0.035),
+      transparent 28%
+    ),
+    #f5f7fb;
+}
+
+
+/* =========================
+   MAIN CONTENT AREA
+   ========================= */
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f5f7fb;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   TOPBAR
+   ========================= */
+
+.topbar {
+  width: 100%;
+  flex-shrink: 0;
+
+  position: relative;
+  z-index: 50;
+}
+
+
+/* =========================
+   MAIN SCROLL AREA
+   ========================= */
+
+.dashboard-main {
+  flex: 1;
+
+  min-width: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 20px 24px 30px;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.dashboard-main::-webkit-scrollbar {
+  width: 7px;
+}
+
+.dashboard-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-main::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+.dashboard-main::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================
+   WHATSAPP PAGE
+   ========================= */
+
+.whatsapp-page {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+}
+
+
+/* =========================
+   WHATSAPP NAVIGATION
+   ========================= */
+
+.whatsapp-tabs {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid #e5e7eb;
+
+  padding: 6px;
+
+  border-radius: 14px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    0 8px 24px rgba(15, 23, 42, 0.035);
+
+  position: relative;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.whatsapp-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================
+   TAB BUTTON
+   ========================= */
+
+.whatsapp-tabs button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #64748b;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.01em;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Hover */
+
+.whatsapp-tabs button:hover {
+  color: #334155;
+
+  background: #f8fafc;
+}
+
+
+/* Active */
+
+.whatsapp-tabs button.active {
+  color: #4338ca;
+
+  background: #eef2ff;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(99, 102, 241, 0.08);
+}
+
+
+/* Active indicator */
+
+.whatsapp-tabs button.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 22px;
+  height: 3px;
+
+  transform: translateX(-50%);
+
+  background: #4f46e5;
+
+  border-radius: 10px 10px 0 0;
+}
+
+
+/* =========================
+   WHATSAPP CONTENT
+   ========================= */
+
+.whatsapp-content {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   GENERIC PAGE CONTAINER
+   ========================= */
+
+.page-placeholder {
+  width: 100%;
+  min-height: 420px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    0 10px 30px rgba(15, 23, 42, 0.035);
+}
+
+.page-placeholder h1 {
+  font-size: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.03em;
+
+  color: #111827;
+
+  margin-bottom: 10px;
+}
+
+.page-placeholder p {
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   DASHBOARD PAGE CARDS
+   Useful for child modules
+   ========================= */
+
+.dashboard-main > div {
+  min-width: 0;
+}
+
+
+/* =========================
+   ENTERPRISE CARD SYSTEM
+   These classes can also be
+   reused by child components.
+   ========================= */
+
+.dashboard-card {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    0 8px 24px rgba(15, 23, 42, 0.035);
+}
+
+
+/* =========================
+   SECTION HEADER
+   ========================= */
+
+.dashboard-section-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.dashboard-section-header h1,
+.dashboard-section-header h2,
+.dashboard-section-header h3 {
+  color: #111827;
+
+  letter-spacing: -0.025em;
+}
+
+.dashboard-section-header p {
+  margin-top: 5px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   COMMON BUTTON
+   ========================= */
+
+.dashboard-primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #6366f1
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dashboard-primary-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px rgba(79, 70, 229, 0.2);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard-main {
+    padding: 18px 20px 25px;
+  }
+
+  .whatsapp-tabs {
+    margin-bottom: 16px;
+  }
+
+  .whatsapp-tabs button {
+    padding: 0 16px;
+  }
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 992px) {
+
+  .dashboard {
+    height: 100vh;
+  }
+
+  .dashboard-main {
+    padding: 16px 16px 24px;
+  }
+
+  .whatsapp-tabs {
+    border-radius: 12px;
+
+    padding: 5px;
+
+    gap: 3px;
+  }
+
+  .whatsapp-tabs button {
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    font-size: 13px;
+  }
+
+  .page-placeholder {
+    min-height: 360px;
+  }
+
+  .page-placeholder h1 {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    height: 100vh;
+  }
+
+  .dashboard-main {
+    padding: 12px 12px 20px;
+  }
+
+  .whatsapp-tabs {
+    width: calc(100% + 0px);
+
+    margin-bottom: 12px;
+
+    border-radius: 11px;
+
+    padding: 4px;
+  }
+
+  .whatsapp-tabs button {
+    min-height: 38px;
+
+    padding: 0 13px;
+
+    font-size: 13px;
+  }
+
+  .whatsapp-tabs button.active::after {
+    height: 2px;
+
+    width: 18px;
+  }
+
+  .page-placeholder {
+    min-height: 300px;
+
+    border-radius: 15px;
+  }
+
+  .page-placeholder h1 {
+    font-size: 23px;
+  }
+
+  .page-placeholder p {
+    padding: 0 20px;
+
+    font-size: 14px;
+  }
+
+  .dashboard-section-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+  .dashboard-main {
+    padding: 10px 10px 18px;
+  }
+
+  .whatsapp-tabs button {
+    min-height: 36px;
+
+    padding: 0 11px;
+
+    font-size: 12px;
+  }
+
+  .page-placeholder {
+    min-height: 260px;
+  }
+}
+
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .dashboard-main {
+    scroll-behavior: auto;
+  }
+
+  .whatsapp-tabs button,
+  .dashboard-primary-btn {
+    transition: none;
+  }
+}

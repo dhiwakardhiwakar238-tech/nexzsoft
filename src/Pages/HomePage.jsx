@@ -2,7 +2,7 @@ import Hero from "../Components/Hero/Hero";
 import Trusted from "../Components/Trusted/Trusted";
 import Features from "../Components/Features/Features";
 import About from "../Components/About/About";
-import Pricing from "../Components/Pricing/Pricing";
+import Pricing from "../Components/Pricing/PricingPreview";
 import FAQ from "../Components/FAQ/FAQ";
 
 import Footer from "../Components/Footer/Footer";
@@ -15,39 +15,37 @@ import Testimonials from "../Components/Testimonials/Testimonials";
 import Stats from "../Components/Stats/Stats";
 import CallToAction from "../Components/CallToAction/CallToAction";
 
-
-
-function Home() {
+function Home({ openAuth }) {
   return (
     <>
       {/* Hero Section */}
-      <Hero />
+      <Hero openAuth={openAuth}/>
 
-      {/* Trusted By */}
-      <Trusted />
+      {/* Trusted By
+      <Trusted />*/}
 
       {/* Features */}
       <Features />
 
-      <DashboardShowcase />
+      {/* <DashboardShowcase />    */}
 
       {/* About */}
-      <About />
+      {/* <About />  */}
 
       {/* Why Choose Us */}
       <WhyChooseUs />
 
       {/* Security & Compliance */}
-      <SecuritySection />
+      <SecuritySection />    
 
       {/* Statistics */}
-      <Stats />
+      <Stats />   
 
       {/* Testimonials */}
       <Testimonials />
 
       {/* Pricing */}
-      <Pricing />
+      <Pricing openAuth={openAuth} />
 
       {/* FAQ */}
       <FAQ />
@@ -56,6 +54,7 @@ function Home() {
       <CallToAction />
 
       <Footer/>
+
     </>
   );
 }

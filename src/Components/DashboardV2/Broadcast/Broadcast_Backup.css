@@ -1,0 +1,1148 @@
+/* =========================================================
+   BROADCAST PAGE
+   Enterprise SaaS Campaign Workspace
+   ========================================================= */
+
+.broadcast-page {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 4px 2px 30px;
+    color: #111827;
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.broadcast-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding: 22px 26px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    box-shadow:
+        0 2px 5px rgba(15, 23, 42, 0.03),
+        0 12px 30px rgba(15, 23, 42, 0.04);
+}
+
+.broadcast-top > div:first-child {
+    min-width: 0;
+}
+
+.broadcast-top h2 {
+    margin: 0 0 6px;
+
+    color: #111827;
+
+    font-size: 25px;
+    font-weight: 750;
+    letter-spacing: -0.4px;
+}
+
+.broadcast-top p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.campaign-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.create-template-btn,
+.new-campaign-btn {
+    border: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-radius: 11px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/*
+   IMPORTANT:
+   .new-campaign-btn is also being used as the
+   "New Campaign" heading inside campaign-card.
+   So only style it like a button when it is
+   actually inside the header actions.
+*/
+
+.campaign-header-actions .create-template-btn,
+.campaign-header-actions .new-campaign-btn {
+    padding: 11px 18px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 12px rgba(79, 70, 229, 0.18);
+}
+
+.campaign-header-actions .create-template-btn:hover,
+.campaign-header-actions .new-campaign-btn:hover {
+    transform: translateY(-1px);
+
+    background: #4338ca;
+
+    box-shadow:
+        0 8px 18px rgba(79, 70, 229, 0.24);
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.broadcast-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.broadcast-stat-card {
+    position: relative;
+
+    min-height: 125px;
+
+    padding: 20px 21px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 2px 5px rgba(15, 23, 42, 0.025),
+        0 10px 25px rgba(15, 23, 42, 0.035);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.broadcast-stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.broadcast-stat-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    right: -30px;
+    top: -30px;
+
+    background: rgba(79, 70, 229, 0.055);
+}
+
+.broadcast-stat-card h2 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 7px;
+
+    color: #111827;
+
+    font-size: 29px;
+    line-height: 1;
+
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+.broadcast-stat-card p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* KPI accent */
+
+.broadcast-stat-card {
+    border-left: 3px solid #4f46e5;
+}
+
+.broadcast-stat-card.success {
+    border-left-color: #22c55e;
+}
+
+.broadcast-stat-card.info {
+    border-left-color: #3b82f6;
+}
+
+.broadcast-stat-card.warning {
+    border-left-color: #f59e0b;
+}
+
+
+/* =========================================================
+   MAIN CAMPAIGN WORKSPACE
+   ========================================================= */
+
+.broadcast-main {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   CAMPAIGN COMPOSER
+   ========================================================= */
+
+.campaign-card,
+.preview-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 2px 5px rgba(15, 23, 42, 0.025),
+        0 12px 30px rgba(15, 23, 42, 0.04);
+}
+
+
+/* Existing h3 uses class "new-campaign-btn".
+   Override it here so it behaves as a heading. */
+
+.campaign-card h3.new-campaign-btn {
+    margin: 0 0 24px;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: #111827;
+
+    font-size: 19px;
+    font-weight: 750;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    cursor: default;
+}
+
+.campaign-card h3.new-campaign-btn:hover {
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+/* Composer padding */
+
+.campaign-card {
+    padding: 24px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    color: #334155;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe1ea;
+
+    border-radius: 10px;
+
+    color: #111827;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #c7ced9;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   CAMPAIGN ACTIONS
+   ========================================================= */
+
+.campaign-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin: 5px 0 14px;
+}
+
+.attach-btn,
+.schedule-btn {
+    min-height: 44px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.attach-btn:hover,
+.schedule-btn:hover {
+    background: #f1f5f9;
+
+    border-color: #cbd5e1;
+
+    color: #334155;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
+
+.send-btn {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 13px 18px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 16px rgba(79, 70, 229, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.send-btn:hover {
+    transform: translateY(-1px);
+
+    background: #4338ca;
+
+    box-shadow:
+        0 10px 22px rgba(79, 70, 229, 0.25);
+}
+
+.send-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   AUDIENCE PREVIEW
+   ========================================================= */
+
+.audience-preview {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+    padding: 13px 15px;
+
+    background: #f5f7ff;
+
+    border: 1px solid #e3e7ff;
+
+    border-radius: 11px;
+}
+
+.audience-preview h4 {
+    margin: 0 0 3px;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.audience-preview p {
+    margin: 0;
+
+    color: #4f46e5;
+
+    font-size: 14px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   WHATSAPP PREVIEW
+   ========================================================= */
+
+.preview-card {
+    padding: 22px;
+
+    position: sticky;
+    top: 20px;
+}
+
+.preview-card h3 {
+    margin: 0 0 18px;
+
+    color: #111827;
+
+    font-size: 18px;
+
+    font-weight: 750;
+}
+
+
+/*
+   Phone shell
+*/
+
+.broadcast-phone {
+    width: 100%;
+    max-width: 340px;
+
+    height: 620px;
+
+    margin: 0 auto;
+
+    padding: 10px;
+
+    background: #111827;
+
+    border: 1px solid #273244;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.20);
+}
+
+
+/* Phone header */
+
+.broadcast-phone-header {
+    position: relative;
+
+    flex-shrink: 0;
+
+    padding: 15px 15px 14px;
+
+    background: #075e54;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    border-radius: 22px 22px 10px 10px;
+}
+
+.broadcast-phone-header::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    box-shadow:
+        0 0 0 3px rgba(255,255,255,0.12);
+}
+
+
+/* WhatsApp body */
+
+.broadcast-phone-body {
+    flex: 1;
+
+    margin-top: 4px;
+
+    padding: 18px 13px;
+
+    background:
+        linear-gradient(
+            rgba(236, 229, 221, 0.94),
+            rgba(236, 229, 221, 0.94)
+        );
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+}
+
+.broadcast-phone-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.broadcast-phone-body::-webkit-scrollbar-thumb {
+    background: #c4bdb5;
+
+    border-radius: 20px;
+}
+
+
+/* Message bubble */
+
+.broadcast-preview-message {
+    position: relative;
+
+    width: 100%;
+
+    padding: 14px 14px 12px;
+
+    background: #ffffff;
+
+    color: #111827 !important;
+
+    border-radius: 4px 14px 14px 14px;
+
+    box-sizing: border-box;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.10);
+}
+
+.broadcast-preview-message::after {
+    content: "";
+
+    position: absolute;
+
+    left: -7px;
+    top: 0;
+
+    border-top: 8px solid #ffffff;
+
+    border-left: 8px solid transparent;
+}
+
+.preview-message,
+.broadcast-preview-message * {
+    color: #111827 !important;
+
+    background: transparent !important;
+}
+
+.broadcast-preview-message p,
+.broadcast-preview-message span,
+.broadcast-preview-message div,
+.broadcast-preview-message strong,
+.broadcast-preview-message small {
+    color: #111827 !important;
+}
+
+
+/* Preview buttons */
+
+.preview-btn {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 9px 10px;
+
+    border: none;
+
+    border-top: 1px solid #edf0f2;
+
+    background: #ffffff !important;
+
+    color: #1677ff !important;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   CAMPAIGN HISTORY
+   ========================================================= */
+
+.campaign-history {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 2px 5px rgba(15, 23, 42, 0.025),
+        0 12px 30px rgba(15, 23, 42, 0.04);
+
+    overflow-x: auto;
+}
+
+.history-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+.history-header h3 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 18px;
+
+    font-weight: 750;
+}
+
+.history-header button {
+    border: 1px solid #e0e7ff;
+
+    background: #f5f7ff;
+
+    color: #4f46e5;
+
+    padding: 8px 14px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.history-header button:hover {
+    background: #eef2ff;
+
+    border-color: #c7d2fe;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.campaign-history table {
+    width: 100%;
+
+    min-width: 760px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+}
+
+.campaign-history th {
+    padding: 12px 14px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    border-top: 1px solid #eef2f7;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.campaign-history th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.campaign-history th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.campaign-history td {
+    padding: 15px 14px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    vertical-align: middle;
+}
+
+.campaign-history tbody tr {
+    transition: background 0.2s ease;
+}
+
+.campaign-history tbody tr:hover {
+    background: #fafbff;
+}
+
+.campaign-history tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 72px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    line-height: 1.2;
+}
+
+.sent {
+    background: #ecfdf3;
+
+    color: #15803d;
+}
+
+.scheduled {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+.draft {
+    background: #f3f4f6;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   TABLE ACTION
+   ========================================================= */
+
+.table-btn {
+    border: 1px solid #e0e7ff;
+
+    background: #f5f7ff;
+
+    color: #4f46e5;
+
+    padding: 7px 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.table-btn:hover {
+    background: #4f46e5;
+
+    border-color: #4f46e5;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   EMPTY TABLE STATE
+   ========================================================= */
+
+.campaign-history td[colspan] {
+    padding: 45px 20px;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .broadcast-main {
+        grid-template-columns: minmax(0, 1fr) 340px;
+    }
+
+    .broadcast-phone {
+        height: 580px;
+    }
+}
+
+
+@media (max-width: 1050px) {
+
+    .broadcast-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .broadcast-main {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-card {
+        position: relative;
+
+        top: auto;
+    }
+
+    .broadcast-phone {
+        max-width: 360px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .broadcast-page {
+        gap: 16px;
+
+        padding: 0 0 20px;
+    }
+
+    .broadcast-top {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 18px;
+    }
+
+    .broadcast-top h2 {
+        font-size: 21px;
+    }
+
+    .broadcast-top p {
+        font-size: 13px;
+    }
+
+    .campaign-header-actions {
+        width: 100%;
+    }
+
+    .campaign-header-actions .create-template-btn,
+    .campaign-header-actions .new-campaign-btn {
+        width: 100%;
+    }
+
+
+    .broadcast-stats {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .broadcast-stat-card {
+        min-height: 105px;
+
+        padding: 16px;
+    }
+
+    .broadcast-stat-card h2 {
+        font-size: 24px;
+    }
+
+
+    .campaign-card,
+    .preview-card,
+    .campaign-history {
+        padding: 17px;
+
+        border-radius: 15px;
+    }
+
+
+    .campaign-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .broadcast-phone {
+        height: 560px;
+
+        max-width: 100%;
+    }
+
+
+    .history-header {
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .broadcast-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .broadcast-stat-card {
+        padding: 14px;
+    }
+
+    .broadcast-stat-card h2 {
+        font-size: 21px;
+    }
+
+    .broadcast-stat-card p {
+        font-size: 11px;
+    }
+
+    .audience-preview {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .broadcast-phone {
+        height: 520px;
+    }
+
+    .history-header {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .history-header button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.20);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .broadcast-stat-card,
+    .send-btn,
+    .table-btn,
+    .attach-btn,
+    .schedule-btn,
+    .campaign-header-actions .create-template-btn,
+    .campaign-header-actions .new-campaign-btn {
+        transition: none;
+    }
+}

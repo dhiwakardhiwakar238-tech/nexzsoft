@@ -1,50 +1,609 @@
+/* =========================================
+   OVERLAY
+========================================= */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.6);
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background:
+    rgba(15, 23, 42, 0.68);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
   z-index: 9999;
+
+  animation: overlayIn 0.2s ease-out;
 }
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
 
 .demo-modal {
-  width: 500px;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
   position: relative;
-}
 
-.demo-modal h2 {
-  margin-bottom: 20px;
-}
-
-.demo-modal input,
-.demo-modal textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  max-width: 620px;
+
+  max-height: calc(100vh - 40px);
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 24px;
+
+  padding: 34px;
+
+  box-shadow:
+    0 30px 80px rgba(15, 23, 42, 0.22),
+    0 10px 30px rgba(15, 23, 42, 0.08);
+
+  animation: modalIn 0.25s ease-out;
 }
 
-.demo-submit {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  background: #22c55e;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
+
+
+/* =========================================
+   CUSTOM SCROLLBAR
+========================================= */
+
+.demo-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.demo-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.demo-modal::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
 
 .close-btn {
   position: absolute;
-  right: 15px;
-  top: 10px;
-  border: none;
-  background: transparent;
+
+  top: 18px;
+  right: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
   cursor: pointer;
-  font-size: 18px;
+
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #f1f5f9;
+
+  color: #0f172a;
+
+  border-color: #cbd5e1;
+
+  transform: rotate(3deg);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.demo-header {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding-right: 45px;
+
+  margin-bottom: 14px;
+}
+
+.demo-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #2563eb
+    );
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.22);
+}
+
+.demo-eyebrow {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #4f46e5;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.demo-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 27px;
+  line-height: 1.2;
+
+  font-weight: 750;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.demo-description {
+  max-width: 520px;
+
+  margin: 0 0 27px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.demo-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+/* =========================================
+   FORM FIELD
+========================================= */
+
+.demo-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.demo-field label {
+  color: #334155;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   TWO COLUMN ROW
+========================================= */
+
+.demo-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   INPUT WRAPPER
+========================================= */
+
+.input-wrapper,
+.textarea-wrapper {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #dbe2ea;
+
+  background: #ffffff;
+
+  border-radius: 11px;
+
+  min-height: 40px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 40px;
+
+    box-sizing: border-box;
+
+    padding: 0 14px 0 42px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #111827;
+}
+
+.textarea-wrapper {
+    align-items: flex-start;
+}
+
+.textarea-wrapper textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 86px;
+
+    padding: 13px 14px 13px 42px;
+
+    border: none;
+
+    outline: none;
+
+    resize: vertical;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #111827;
+}
+
+.input-wrapper svg,
+.textarea-wrapper svg {
+  position: absolute;
+
+  left: 14px;
+
+  color: #94a3b8;
+
+  pointer-events: none;
+
+  transition: color 0.2s ease;
+}
+
+.textarea-wrapper svg {
+  top: 15px;
+}
+
+.input-wrapper:focus-within,
+.textarea-wrapper:focus-within {
+  border-color: #6366f1;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+.input-wrapper:focus-within svg,
+.textarea-wrapper:focus-within svg {
+  color: #4f46e5;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.demo-modal input {
+  width: 100%;
+
+  height: 22px;
+
+  padding:
+    0 14px 0 40px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.demo-modal input::placeholder,
+.demo-modal textarea::placeholder {
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.textarea-wrapper {
+  align-items: flex-start;
+}
+
+.textarea-wrapper svg {
+  top: 12px;
+}
+
+.demo-modal textarea {
+  width: 100%;
+
+  min-height: 60px;
+
+  padding:
+    13px 14px 13px 40px;
+
+  border: none;
+
+  outline: none;
+
+  resize: vertical;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.demo-submit {
+  width: 100%;
+
+  min-height: 49px;
+
+  margin-top: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #2563eb
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.demo-submit:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(79, 70, 229, 0.28);
+}
+
+.demo-submit:active {
+  transform: translateY(0);
+}
+
+.demo-submit svg {
+  transition: transform 0.2s ease;
+}
+
+.demo-submit:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   TRUST MESSAGE
+========================================= */
+
+.demo-trust {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 1px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.demo-trust svg {
+  color: #16a34a;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 650px) {
+
+  .modal-overlay {
+    padding: 15px;
+  }
+
+  .demo-modal {
+    max-height: calc(100vh - 30px);
+
+    padding: 27px 22px;
+
+    border-radius: 20px;
+  }
+
+  .demo-header h2 {
+    font-size: 24px;
+  }
+
+  .demo-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .demo-modal {
+    padding: 24px 18px;
+
+    border-radius: 18px;
+  }
+
+  .close-btn {
+    top: 13px;
+    right: 13px;
+
+    width: 34px;
+    height: 34px;
+  }
+
+  .demo-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .demo-header h2 {
+    font-size: 22px;
+  }
+
+  .demo-description {
+    font-size: 13px;
+
+    margin-bottom: 22px;
+  }
+
+  .demo-form {
+    gap: 14px;
+  }
+
 }

@@ -1,386 +1,824 @@
-/* RESET */
+
+/* =========================================================
+   NEXZSOFT ENTERPRISE NAVBAR
+========================================================= */
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* HEADER */
-.header {
-  width: 100%;
-  min-height: 90px;
-  background: #020617;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* =========================================================
+   APP OFFSET
+   Keeps page content from going underneath the fixed navbar
+========================================================= */
 
-  padding: 0 50px;
+/*.app {
+  padding-top: 76px;
+}*/
 
-  position: sticky;
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nx-navbar {
+  position: fixed;
+
   top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
   z-index: 1000;
 
-  border-bottom: 1px solid #1e293b;
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 4px 20px rgba(15, 23, 42, 0.04);
 }
 
-/* LOGO */
-.logo {
+
+/* =========================================================
+   NAVBAR INNER
+========================================================= */
+
+.nx-navbar-inner {
+  width: min(1440px, calc(100% - 64px));
+
+  min-height: 76px;
+
+  margin: auto;
+
   display: flex;
   align-items: center;
-}
 
-.logo a {
-  text-decoration: none;
-}
-
-.logo-img {
-  height: 110px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-}
-
-/* NAVIGATION */
-.nav-menu {
-  display: flex;
-  align-items: center;
   gap: 30px;
 }
 
-/* LINKS */
-.nav-menu a {
-  color: white;
-  text-decoration: none; /* underline remove */
-  font-size: 17px;
-  font-weight: 500;
-  transition: 0.3s ease;
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nx-brand {
+  flex-shrink: 0;
 }
 
-.nav-menu a:hover {
-  color: #22c55e;
-}
-
-/* DROPDOWN */
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  background: transparent;
-  border: none;
-
-  color: white;
-  font-size: 17px;
-  font-weight: 500;
-
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.dropbtn:hover {
-  color: #22c55e;
-}
-
-/* DROPDOWN MENU */
-.dropdown-content {
-  display: none;
-
-  position: absolute;
-  top: 45px;
-  left: 0;
-
-  min-width: 240px;
-
-  background: #111827;
-
-  border-radius: 12px;
-
-  overflow: hidden;
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-
-  border: 1px solid #1e293b;
-
-  z-index: 9999;
-}
-
-.dropdown-content a {
-  display: block;
-
-  padding: 14px 18px;
-
-  color: white;
-  text-decoration: none;
-
-  transition: 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background: #1f2937;
-  color: #22c55e;
-}
-
-/* HOVER OPEN */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* LOGIN BUTTON */
-.login-btn {
-  background: #22c55e;
-  color: black;
-
-  border: none;
-
-  padding: 12px 22px;
-
-  border-radius: 10px;
-
-  font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.3s ease;
-}
-
-.login-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* =========================
-   LAPTOP
-========================= */
-
-@media screen and (max-width: 1200px) {
-  .header {
-    padding: 0 25px;
-  }
-
-  .nav-menu {
-    gap: 18px;
-  }
-
-  .nav-menu a,
-  .dropbtn {
-    font-size: 15px;
-  }
-
-  .login-btn {
-    padding: 10px 16px;
-  }
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media screen and (max-width: 992px) {
-  .header {
-    flex-direction: column;
-    padding: 15px 20px;
-  }
-
-  .logo-img {
-    height: 90px;
-    margin-bottom: 10px;
-  }
-
-  .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .dropdown-content {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 15px;
-  }
-
-  .logo-img {
-    height: 75px;
-  }
-
-  .nav-menu {
-    width: 100%;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 12px;
-  }
-
-  .nav-menu a,
-  .dropbtn {
-    font-size: 14px;
-  }
-
-  .login-btn {
-    width: 100%;
-    max-width: 220px;
-  }
-
-  .dropdown-content {
-    min-width: 200px;
-  }
-}
-
-
-.header {
-  backdrop-filter: blur(15px);
-  background: rgba(2, 6, 23, 0.92);
-}
-
-.logo-img {
-  transition: 0.3s;
-}
-
-.logo-img:hover {
-  transform: scale(1.05);
-}
-
-.trial-btn {
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #22c55e
-  );
-
-  color: white;
-
-  border: none;
-
-  padding: 12px 20px;
-
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  font-weight: 600;
-}
-
-.trial-btn:hover {
-  transform: translateY(-2px);
-}
-
-.hamburger {
-  display: none;
-
-  font-size: 28px;
-  color: white;
-
-  cursor: pointer;
-}
-
-
-.contact-sales {
-  position: relative;
-}
-
-.sales-btn {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.sales-btn:hover {
-  color: #22c55e;
-}
-
-.sales-dropdown {
-  position: absolute;
-  top: 45px;
-  left: 0;
-
-  width: 260px;
-
-  background: #ffffff;
-
-  border-radius: 14px;
-
-  padding: 12px;
-
-  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
-
-  z-index: 9999;
-}
-
-.sales-item {
+.nx-brand a {
   display: flex;
   align-items: center;
 
-  gap: 12px;
+  text-decoration: none;
+}
 
-  padding: 14px;
+.nx-logo {
+  width: auto;
+  height: 54px;
 
-  border-radius: 10px;
+  display: block;
 
-  color: #111827;
+  object-fit: contain;
 
+  transition: transform 0.25s ease;
+}
+
+.nx-logo:hover {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.nx-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin-left: 18px;
+}
+
+
+/* =========================================================
+   NAV ITEMS
+========================================================= */
+
+.nx-nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 11px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #334155;
+
+  font-family: inherit;
   font-size: 15px;
+  font-weight: 550;
+
+  text-decoration: none;
 
   cursor: pointer;
 
-  transition: 0.3s;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
-.sales-item:hover {
-  background: #f3f4f6;
-  transform: translateX(5px);
+.nx-nav-link:hover {
+  color: #2563eb;
+
+  background: #f1f5f9;
 }
 
 
-/* =========================
-   SMALL MOBILE
-========================= */
-@media screen and (max-width:768px) {
+/* =========================================================
+   CHEVRON
+========================================================= */
 
-  .hamburger {
-    display: block;
+.nx-nav-link svg {
+  transition: transform 0.25s ease;
+}
+
+.nx-chevron-open {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN WRAPPER
+========================================================= */
+
+.nx-nav-dropdown {
+  position: relative;
+}
+
+
+/* =========================================================
+   DROPDOWN BASE
+========================================================= */
+
+.nx-dropdown {
+  position: absolute;
+
+  top: calc(100% + 14px);
+  left: 0;
+
+  width: 360px;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.14),
+    0 4px 12px rgba(15, 23, 42, 0.05);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+
+  z-index: 2000;
+}
+
+
+/* =========================================================
+   DESKTOP HOVER DROPDOWN
+========================================================= */
+
+@media (min-width: 769px) {
+
+  .nx-nav-dropdown:hover .nx-dropdown {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
   }
 
-  .nav-menu {
-    display: none;
+}
 
+
+/* =========================================================
+   DROPDOWN INTRO
+========================================================= */
+
+.nx-dropdown-intro {
+  padding: 12px 14px 14px;
+
+  border-bottom: 1px solid #eef2f7;
+
+  margin-bottom: 6px;
+}
+
+.nx-dropdown-intro span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #2563eb;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.nx-dropdown-intro strong {
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SOLUTION ITEMS
+========================================================= */
+
+.nx-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nx-dropdown-item:hover {
+  background: #f8fafc;
+
+  transform: translateX(2px);
+}
+
+.nx-dropdown-item > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.nx-dropdown-item strong {
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+.nx-dropdown-item span {
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ICON BOXES
+========================================================= */
+
+.nx-dropdown-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+}
+
+.nx-dropdown-icon.blue {
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.nx-dropdown-icon.purple {
+  background: #f5f3ff;
+
+  color: #7c3aed;
+}
+
+.nx-dropdown-icon.green {
+  background: #ecfdf5;
+
+  color: #059669;
+}
+
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+
+.nx-resources-dropdown {
+  width: 520px;
+}
+
+.nx-resource-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 4px;
+}
+
+.nx-resource-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  color: #64748b;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.nx-resource-item:hover {
+  background: #f8fafc;
+
+  color: #2563eb;
+}
+
+.nx-resource-item svg {
+  margin-top: 2px;
+
+  flex-shrink: 0;
+}
+
+.nx-resource-item div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.nx-resource-item strong {
+  color: #0f172a;
+
+  font-size: 13px;
+}
+
+.nx-resource-item span {
+  color: #64748b;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SALES DROPDOWN
+========================================================= */
+
+.nx-sales-dropdown {
+  width: 300px;
+}
+
+.nx-sales-item {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 38px 1fr auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition: background 0.2s ease;
+}
+
+.nx-sales-item:hover {
+  background: #f8fafc;
+}
+
+.nx-sales-item > svg:first-child {
+  width: 36px;
+  height: 36px;
+
+  padding: 9px;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.nx-sales-item div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.nx-sales-item strong {
+  color: #0f172a;
+
+  font-size: 13px;
+}
+
+.nx-sales-item span {
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.nx-sales-item > svg:last-child {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+========================================================= */
+
+.nx-actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.nx-login-btn {
+  padding: 10px 16px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.nx-login-btn:hover {
+  border-color: #cbd5e1;
+
+  background: #f8fafc;
+
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.nx-dashboard {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  color: #334155;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.nx-dashboard:hover {
+  background: #f1f5f9;
+
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   START FREE CTA
+========================================================= */
+
+.nx-start-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 18px;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  box-shadow:
+    0 5px 14px rgba(37, 99, 235, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nx-start-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.28);
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
+.nx-mobile-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .nx-navbar-inner {
+    width: min(100% - 40px, 1200px);
+
+    gap: 15px;
+  }
+
+  .nx-nav {
+    margin-left: 5px;
+  }
+
+  .nx-nav-link {
+    padding: 10px 9px;
+
+    font-size: 14px;
+  }
+
+  .nx-start-btn {
+    padding: 10px 14px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .app {
+    padding-top: 70px;
+  }
+
+  .nx-navbar-inner {
+    min-height: 70px;
+
+    width: calc(100% - 32px);
+  }
+
+  .nx-logo {
+    height: 50px;
+  }
+
+  .nx-mobile-toggle {
+    display: flex;
+  }
+
+  .nx-actions {
+    display: none;
+  }
+
+  .nx-nav {
     position: absolute;
 
-    top: 100%;
+    top: calc(100% + 1px);
     left: 0;
 
     width: 100%;
 
-    background: #020617;
-
-    padding: 20px;
+    display: none;
 
     flex-direction: column;
 
-    gap: 15px;
+    align-items: stretch;
+
+    gap: 2px;
+
+    padding: 12px 16px 20px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow:
+      0 15px 35px rgba(15, 23, 42, 0.10);
   }
 
-  .nav-menu.active {
+  .nx-nav-open {
     display: flex;
   }
 
-  .login-btn,
-  .trial-btn {
+  .nx-nav-link {
+    width: 100%;
+
+    justify-content: space-between;
+
+    padding: 13px 12px;
+
+    font-size: 15px;
+  }
+
+
+  /* =======================================================
+     MOBILE DROPDOWN
+  ======================================================= */
+
+  .nx-dropdown {
+    position: static;
+
+    display: none;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 6px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    box-shadow: none;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: none;
+
+    background: #f8fafc;
+  }
+
+  .nx-dropdown-mobile-open {
+    display: block;
+  }
+
+
+  .nx-resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nx-resources-dropdown,
+  .nx-solutions-dropdown,
+  .nx-sales-dropdown {
     width: 100%;
   }
+
+  .nx-dropdown-intro {
+    display: none;
+  }
+
+  .nx-dropdown-item,
+  .nx-resource-item {
+    padding: 11px;
+  }
+
 }
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .nx-navbar-inner {
+    width: calc(100% - 24px);
+  }
+
+  .nx-logo {
+    height: 46px;
+  }
+
+  .nx-nav {
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+  .nx-dropdown-item span,
+  .nx-resource-item span {
+    display: none;
+  }
+
+}
+
+

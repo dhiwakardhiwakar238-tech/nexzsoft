@@ -8,7 +8,9 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 100px 60px;
+  padding: 90px 60px;
+
+  margin-top: 76px;
 
   background: linear-gradient(
     135deg,
@@ -62,10 +64,11 @@
   font-size: 72px;
   line-height: 1.1;
   margin-bottom: 25px;
+  color: #000000;
 }
 
 .hero-left h1 span {
-  color: #60a5fa;
+  color: #ffffff;
 }
 
 .hero-left p {

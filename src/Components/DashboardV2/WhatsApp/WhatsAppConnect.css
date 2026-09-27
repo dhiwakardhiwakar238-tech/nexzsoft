@@ -1,0 +1,971 @@
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.wa-connect-page {
+    width: 100%;
+    padding: 30px;
+}
+
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.wa-card {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #ececec;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.wa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wa-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+
+/* ==========================================
+   CONNECTION BADGE
+========================================== */
+
+.connected-badge,
+.disconnected-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.connected-badge {
+    background: #effdf4;
+    color: #22a447;
+}
+
+.disconnected-badge {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+
+/* ==========================================
+   STATUS DOTS
+========================================== */
+
+.green-dot,
+.red-dot,
+.yellow-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.green-dot {
+    background: #22c55e;
+}
+
+.red-dot {
+    background: #ef4444;
+}
+
+.yellow-dot {
+    background: #e5a100;
+}
+
+
+/* ==========================================
+   MAIN WHATSAPP + META GRID
+========================================== */
+
+.wa-main-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 0;
+    margin: 0 28px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ==========================================
+   WHATSAPP DETAILS
+========================================== */
+
+.wa-main-grid .wa-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+    padding: 25px 28px 25px 0;
+
+    border-right: 1px solid #eeeeee;
+}
+
+.wa-details {
+    flex: 1;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    display: block;
+    color: #7d7d7d;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.detail-item h4 {
+    margin: 0;
+    color: #202020;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.api-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000000;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   WHATSAPP ICON
+========================================== */
+
+.wa-icon-wrapper {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-bg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f2fff6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.icon-bg::before {
+    content: "";
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+    background: #e6fced;
+}
+
+.icon-inner {
+    position: relative;
+    z-index: 1;
+
+    width: 90px;
+    height: 90px;
+
+    background: #25d366;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-inner svg {
+    font-size: 55px;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   META ACCOUNT SECTION
+========================================== */
+
+.wa-main-grid .meta-account-section {
+    margin: 0;
+    padding: 25px 0 25px 28px;
+    border-top: none;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 18px 0;
+}
+
+
+/* ==========================================
+   META STATUS ROW
+========================================== */
+
+.meta-status-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.meta-status-row:last-child {
+    border-bottom: none;
+}
+
+.meta-status-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.meta-status-info .label {
+    font-size: 13px;
+    color: #777777;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/* ==========================================
+   META STATUS
+========================================== */
+
+.meta-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.meta-status.success {
+    color: #16803c;
+}
+
+.meta-status.warning {
+    color: #b7791f;
+}
+
+.meta-status.error {
+    color: #d93025;
+}
+
+/* ==========================================
+   PAYMENT STATUS MESSAGES
+========================================== */
+
+.payment-error-message,
+.payment-warning-message,
+.payment-success-message {
+    display: block;
+
+    margin: 5px 0 12px 0;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    max-width: 650px;
+}
+
+.payment-error-message {
+    color: #d93025;
+}
+
+.payment-warning-message {
+    color: #b7791f;
+}
+
+.payment-success-message {
+    color: #16803c;
+}
+
+
+/* ==========================================
+   PAYMENT SETUP BUTTON
+========================================== */
+
+.payment-setup-btn {
+    border: none;
+    background: #1877f2;
+    color: #ffffff;
+
+    padding: 8px 15px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.payment-setup-btn:hover {
+    background: #166fe5;
+}
+
+
+/* ==========================================
+   MESSAGING STATUS
+========================================== */
+
+.messaging-status {
+    margin: 20px 28px 24px 28px;
+    padding: 18px 20px;
+
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+.messaging-status.ready {
+    background: #f7fbf8;
+    border-color: #d9eddf;
+}
+
+.messaging-status.action-required {
+    background: #fff8f7;
+    border-color: #f3d5d1;
+}
+
+
+/* ==========================================
+   MESSAGING HEADER
+========================================== */
+
+.messaging-status-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.messaging-status-header h3 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.messaging-status.ready .messaging-status-header h3 {
+    color: #16803c;
+}
+
+.messaging-status.action-required .messaging-status-header h3 {
+    color: #d93025;
+}
+
+
+/* ==========================================
+   MESSAGING STATUS DOT
+========================================== */
+
+.messaging-status-dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.messaging-status-dot.ready-dot {
+    background: #1ca24c;
+}
+
+.messaging-status-dot.error-dot {
+    background: #d93025;
+}
+
+
+/* ==========================================
+   MESSAGING DESCRIPTION
+========================================== */
+
+.messaging-status p {
+    margin: 9px 0 0 18px;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #666666;
+}
+
+
+/* ==========================================
+   MESSAGING ACTION BUTTON
+========================================== */
+
+.messaging-action-btn {
+    margin-left: 18px;
+    margin-top: 12px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.wa-footer {
+    margin-top: 6px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wa-footer p {
+    color: #888888;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* ==========================================
+   DISCONNECT BUTTON
+========================================== */
+
+.disconnect-btn {
+    background: #ffffff;
+    color: #ef4444;
+
+    border: 1.5px solid #ef4444;
+
+    padding: 10px 24px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.disconnect-btn:hover {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   CONNECT BUTTON
+========================================== */
+
+.connect-btn {
+    background: #25d366;
+    color: #ffffff;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.connect-btn:hover {
+    background: #1ebe5d;
+}
+
+
+/* ==========================================
+   DISCONNECTED / CONNECTED TEXT
+========================================== */
+
+.disconnected {
+    color: red;
+    font-weight: 600;
+}
+
+.connected {
+    color: green;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   BUTTON GROUP
+========================================== */
+
+.wa-buttons {
+    margin-top: 10px;
+
+    display: flex;
+    gap: 20px;
+}
+
+
+/* ==========================================
+   DISCONNECT CONFIRMATION MODAL
+========================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal {
+    width: 420px;
+    max-width: 90%;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 24px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal h3 {
+    margin: 0 0 12px;
+
+    font-size: 20px;
+    color: #111111;
+}
+
+.modal p {
+    color: #666666;
+
+    line-height: 1.6;
+
+    margin-bottom: 24px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+
+/* ==========================================
+   MODAL BUTTONS
+========================================== */
+
+.cancel-btn {
+    padding: 10px 18px;
+
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #d9e4f8;
+}
+
+.confirm-btn {
+    padding: 10px 18px;
+
+    border: none;
+
+    background: #dc2626;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .wa-body {
+        flex-direction: column;
+        text-align: left;
+        gap: 24px;
+    }
+
+    .wa-header,
+    .wa-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .wa-icon-wrapper {
+        width: 100%;
+    }
+
+    .disconnect-btn {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - MAIN GRID
+========================================== */
+
+@media (max-width: 700px) {
+
+    .wa-connect-page {
+        padding: 20px;
+    }
+
+    .wa-main-grid {
+        grid-template-columns: 1fr;
+        margin: 0 18px;
+    }
+
+    .wa-main-grid .wa-body {
+        padding: 20px 0;
+
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .wa-main-grid .meta-account-section {
+        padding: 20px 0;
+    }
+
+    .messaging-status {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - SMALL MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .meta-account-section {
+        margin: 0 18px;
+    }
+
+    .messaging-status {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .wa-card {
+        padding: 15px;
+    }
+
+    .wa-header h2 {
+        font-size: 22px;
+    }
+
+    .connected-badge,
+    .disconnected-badge {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+
+/* =====================================================
+   WHATSAPP CONNECTION OVERLAY
+===================================================== */
+
+.wa-connecting-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 23, 42, 0.42);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    animation: waOverlayIn 180ms ease-out;
+}
+
+
+/* =====================================================
+   CONNECTION CARD
+===================================================== */
+
+.wa-connecting-card {
+    width: min(420px, calc(100vw - 40px));
+
+    padding: 34px 36px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(226, 232, 240, 0.9);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 24px 70px rgba(15, 23, 42, 0.18),
+        0 8px 24px rgba(15, 23, 42, 0.08);
+
+    text-align: center;
+
+    animation: waCardIn 220ms ease-out;
+}
+
+
+/* =====================================================
+   SPINNER
+===================================================== */
+
+.wa-connecting-spinner {
+    position: relative;
+
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #25d366;
+
+    font-size: 28px;
+}
+
+
+/* rotating ring */
+
+.spinner-ring {
+    position: absolute;
+    inset: 0;
+
+    border: 3px solid #e8f5ed;
+
+    border-top-color: #25d366;
+
+    border-radius: 50%;
+
+    animation: waSpin 1s linear infinite;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.wa-connecting-card h3 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #172033;
+
+    letter-spacing: -0.2px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.wa-connecting-card p {
+    margin: 10px auto 0;
+
+    max-width: 330px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+
+.wa-connecting-progress {
+    position: relative;
+
+    width: 100%;
+    height: 4px;
+
+    margin-top: 24px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #eef2f7;
+}
+
+
+.wa-connecting-progress span {
+    position: absolute;
+
+    top: 0;
+    left: -35%;
+
+    width: 35%;
+    height: 100%;
+
+    border-radius: 999px;
+
+    background: #25d366;
+
+    animation: waProgress 1.5s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.wa-connecting-status {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 16px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #64748b;
+}
+
+
+.status-pulse {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+
+    animation: waPulse 1.6s infinite;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes waSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes waProgress {
+    0% {
+        left: -35%;
+    }
+
+    50% {
+        left: 60%;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+
+@keyframes waPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+
+@keyframes waOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes waCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

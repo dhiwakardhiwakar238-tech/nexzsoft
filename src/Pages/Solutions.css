@@ -1,0 +1,392 @@
+/* ========================= */
+
+.solutions{
+
+    padding:40px 8%;
+    background:#f7f9fc;
+    margin-top: 76px;
+
+}
+
+/* ========================= */
+
+.section-header{
+
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+    margin-bottom:70px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#eef5ff;
+
+    color:#2563eb;
+
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.5px;
+
+    margin-bottom:18px;
+
+}
+
+.section-header h2{
+
+    font-size:48px;
+    line-height:1.2;
+
+    color:#0f172a;
+
+    margin-bottom:20px;
+
+}
+
+.section-header p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#64748b;
+
+}
+
+/* ========================= */
+
+.solutions-grid{
+
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+
+    gap:30px;
+
+}
+
+/* ========================= */
+
+.solution-card{
+
+    background:#fff;
+
+    border:1px solid #edf2f7;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* top green line */
+
+.solution-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:4px;
+
+    /*background:#22c55e;*/
+
+    background:#2563eb;
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+.solution-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(15,23,42,.08);
+
+}
+
+.solution-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* ========================= */
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.icon{
+
+    width:62px;
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#f4f7fb;
+
+    font-size:28px;
+
+}
+
+.product-tag{
+
+    background:#f0fdf4;
+
+    color:#15803d;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ========================= */
+
+.solution-card h3{
+
+    font-size:28px;
+
+    color:#0f172a;
+
+    margin-bottom:18px;
+
+}
+
+.solution-card p{
+
+    color:#64748b;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+    margin-bottom:28px;
+
+}
+
+/* ========================= */
+
+.feature-title{
+
+    font-size:13px;
+
+    color:#94a3b8;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+/* ========================= */
+
+.solution-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 35px;
+
+}
+
+.solution-card li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+    color:#334155;
+
+    font-size:15px;
+
+}
+
+.solution-card li span{
+
+    width:26px;
+    height:26px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#f0fdf4;
+
+    color:#16a34a;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+/* ========================= */
+
+.solution-card button{
+
+    background:none;
+
+    border:none;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.solution-card button:hover{
+
+    letter-spacing:.5px;
+
+}
+
+/* ========================= */
+
+@media(max-width:992px){
+
+.section-header h2{
+
+font-size:38px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.solutions{
+
+padding:70px 5%;
+
+}
+
+.section-header h2{
+
+font-size:32px;
+
+}
+
+.solutions-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+.icon{
+
+    width:64px;
+    height:64px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+
+    background:#eef6ff;
+
+    color:#2563eb;
+
+    font-size:30px;
+
+    transition:.3s;
+
+}
+
+.solution-card:hover .icon{
+
+    background:#2563eb;
+    color:#fff;
+    transform:rotate(-8deg);
+
+}
+
+.coming-soon-btn {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #020617;
+  color: white;
+
+  padding: 6px 12px;
+  border-radius: 6px;
+
+  font-size: 13px;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+}
+
+.coming-soon-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

@@ -18,50 +18,50 @@ function WhatsApp() {
   const [autoReply, setAutoReply] =
     useState(true);
 
-  const chats = [
-    {
-      id: 1,
-      name: "Samsung India",
-      company: "Samsung",
-      email: "contact@samsung.com",
-      phone: "+91 9876543210",
-      last: "Need pricing",
-      unread: 3,
-      online: true,
-      typing: true
-    },
+  // const chats = [
+  //   {
+  //     id: 1,
+  //     name: "Samsung India",
+  //     company: "Samsung",
+  //     email: "contact@samsung.com",
+  //     phone: "+91 9876543210",
+  //     last: "Need pricing",
+  //     unread: 3,
+  //     online: true,
+  //     typing: true
+  //   },
 
-    {
-      id: 2,
-      name: "ABC Retail",
-      company: "ABC Pvt Ltd",
-      email: "info@abcretail.com",
-      phone: "+91 9876543211",
-      last: "WhatsApp API info",
-      unread: 1,
-      online: true,
-      typing: false
-    },
+  //   {
+  //     id: 2,
+  //     name: "ABC Retail",
+  //     company: "ABC Pvt Ltd",
+  //     email: "info@abcretail.com",
+  //     phone: "+91 9876543211",
+  //     last: "WhatsApp API info",
+  //     unread: 1,
+  //     online: true,
+  //     typing: false
+  //   },
 
-    {
-      id: 3,
-      name: "Tech World",
-      company: "Tech World",
-      email: "support@techworld.com",
-      phone: "+91 9876543212",
-      last: "Thanks",
-      unread: 0,
-      online: false,
-      typing: false
-    }
-  ];
+  //   {
+  //     id: 3,
+  //     name: "Tech World",
+  //     company: "Tech World",
+  //     email: "support@techworld.com",
+  //     phone: "+91 9876543212",
+  //     last: "Thanks",
+  //     unread: 0,
+  //     online: false,
+  //     typing: false
+  //   }
+  // ];
 
   return (
     <div className="whatsapp-page">
 
       {/* LEFT CONTACTS */}
 
-      <div className="contact-panel">
+      {/* <div className="contact-panel">
 
         <div className="panel-header">
           Conversations
@@ -113,11 +113,11 @@ function WhatsApp() {
           </div>
         ))}
 
-      </div>
+      </div> */}
 
       {/* CENTER CHAT */}
 
-      <div className="chat-panel">
+      {/* <div className="chat-panel">
         <div className="chat-header">
 
           <div>
@@ -185,13 +185,13 @@ function WhatsApp() {
 
         </div>
 
-      </div>
+      </div> */}
 
       {/* RIGHT AI PANEL */}
 
-      <div className="ai-panel">
+      {/* <div className="ai-panel"> */}
 
-        <div className="card">
+        {/* <div className="card">
 
           <h3>📡 Connection Status</h3>
 
@@ -207,9 +207,9 @@ function WhatsApp() {
               : "🔴 Not Connected"}
           </div>
 
-        </div>
+        </div> */}
 
-        <div className="card">
+        {/* <div className="card">
           <h3>Connect WhatsApp</h3>
 
           <button
@@ -222,9 +222,9 @@ function WhatsApp() {
               ? "Disconnect"
               : "Connect"}
           </button>
-        </div>
+        </div> */}
 
-        <div className="card">
+        {/* <div className="card">
 
           <h3>🤖 AI Suggested Reply</h3>
 
@@ -237,9 +237,9 @@ function WhatsApp() {
             Use Reply
           </button>
 
-        </div>
+        </div> */}
 
-        <div className="card">
+        {/* <div className="card">
 
           <h3>⚡ AI Auto Reply</h3>
 
@@ -259,8 +259,8 @@ function WhatsApp() {
 
           </label>
 
-        </div>
-
+        </div> */}
+{/* 
         <div className="card">
           <h3>Knowledge Base</h3>
 
@@ -271,9 +271,9 @@ function WhatsApp() {
           <button className="save-btn">
             Save
           </button>
-        </div>
+        </div> */}
 
-        <div className="card">
+        {/* <div className="card">
 
           <h3>🤖 AI Suggested Reply</h3>
 
@@ -286,9 +286,9 @@ function WhatsApp() {
             Use Reply
           </button>
 
-        </div>
+        </div> */}
 
-        <div className="card">
+        {/* <div className="card">
 
           <h3>AI Auto Reply</h3>
 
@@ -300,9 +300,9 @@ function WhatsApp() {
 
           </label>
 
-        </div>
+        </div> */}
 
-        <div className="card">
+        {/* <div className="card">
           <h3>AI Settings</h3>
 
           <input
@@ -313,7 +313,7 @@ function WhatsApp() {
           <button className="save-btn">
             Update
           </button>
-        </div>
+        </div> */}
 
         {selectedCustomer && (
 
@@ -326,7 +326,7 @@ function WhatsApp() {
 
         )}
 
-      </div>
+      {/* </div> */}
 
     </div>
   );

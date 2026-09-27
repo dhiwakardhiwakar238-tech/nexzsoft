@@ -1,0 +1,530 @@
+.broadcast-page {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.broadcast-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #fff;
+
+    padding: 10px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+.broadcast-top h2 {
+
+    font-size: 30px;
+
+    color: #111827;
+
+    margin-bottom: 8px;
+
+}
+
+.broadcast-top p {
+
+    color: #64748B;
+
+}
+
+
+.campaign-header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.create-template-btn,
+.new-campaign-btn {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+/* Step 1 */
+
+.create-template-btn {
+
+    background:
+        linear-gradient(135deg,
+            #6C63FF,
+            #4F46E5);
+
+    color: white;
+}
+
+/* Step 2 */
+
+.new-campaign-btn {
+
+    background:
+        linear-gradient(135deg,
+            #6C63FF,
+            #4F46E5);
+
+    color: white;
+}
+
+.create-template-btn:hover,
+.new-campaign-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .15);
+}
+
+
+.broadcast-main {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 25px;
+
+    flex: 1;
+
+}
+
+.campaign-card,
+.preview-card {
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+.campaign-card h3,
+.preview-card h3 {
+
+    margin-bottom: 20px;
+
+}
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+}
+
+.form-group label {
+
+    font-weight: 600;
+
+    color: #000000;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    padding: 14px;
+
+    border: 1px solid #E5E7EB;
+
+    background-color: #ffffff;
+
+    color: #111827;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+.form-group textarea {
+
+    height: 150px;
+
+    resize: none;
+
+}
+
+.campaign-actions {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+.attach-btn,
+.schedule-btn {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #EEF2F7;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+.send-btn {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: #4F46E5;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+.preview-card {
+
+    position: sticky;
+
+    top: 20px;
+
+}
+
+
+.broadcast-phone {
+    width: 320px;
+    height: 650px;
+    background: #111827;
+    border-radius: 35px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.broadcast-phone-header {
+    background: #22c55e;
+    color: #fff;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.broadcast-phone-body {
+    flex: 1;
+    background: #ece5dd;
+    margin-top: 15px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.broadcast-preview-message {
+    background: #fff;
+    color: #111827 !important;
+    width: 100%;
+    padding: 18px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.preview-message * {
+    color: #111827 !important;
+    background: transparent !important;
+}
+
+.preview-message p,
+.preview-message span,
+.preview-message div,
+.preview-message strong,
+.preview-message small {
+    color: #111827 !important;
+}
+
+.preview-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #f4f4f4;
+    color: #1877f2 !important;
+    font-weight: 600;
+}
+
+.preview-footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #6b7280 !important;
+}
+
+.campaign-history {
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+
+}
+
+.history-header h3 {
+
+    font-size: 22px;
+    color: #111827;
+
+}
+
+.history-header button {
+
+    border: none;
+
+    background: #EEF2FF;
+
+    color: #4F46E5;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+.campaign-history table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.campaign-history th {
+
+    text-align: left;
+
+    padding: 16px;
+
+    color: #64748B;
+
+    border-bottom: 1px solid #E5E7EB;
+
+}
+
+.campaign-history td {
+
+    padding: 18px 16px;
+
+    border-bottom: 1px solid #F1F5F9;
+
+    color: #111827;
+
+}
+
+.status {
+
+    padding: 6px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.sent {
+
+    background: #DCFCE7;
+
+    color: #15803D;
+
+}
+
+.scheduled {
+
+    background: #DBEAFE;
+
+    color: #2563EB;
+
+}
+
+.draft {
+
+    background: #F3F4F6;
+
+    color: #6B7280;
+
+}
+
+.table-btn {
+
+    border: none;
+
+    background: #4F46E5;
+
+    color: white;
+
+    padding: 8px 16px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+.broadcast-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+.broadcast-stat-card {
+
+    background: #fff;
+
+    padding: 24px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+    border-left: 5px solid #4F46E5;
+
+}
+
+.broadcast-stat-card h2 {
+
+    font-size: 34px;
+
+    color: #111827;
+
+    margin-bottom: 8px;
+
+}
+
+.broadcast-stat-card p {
+
+    color: #64748B;
+
+    font-size: 15px;
+
+}
+
+.broadcast-stat-card.success {
+
+    border-left-color: #22C55E;
+
+}
+
+.broadcast-stat-card.info {
+
+    border-left-color: #3B82F6;
+
+}
+
+.broadcast-stat-card.warning {
+
+    border-left-color: #F59E0B;
+
+}
+
+.audience-preview {
+
+    background: #EEF2FF;
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+.audience-preview h4 {
+
+    margin-bottom: 8px;
+
+    color: #111827;
+
+}
+
+.audience-preview p {
+
+    color: #4F46E5;
+
+    font-weight: 600;
+
+}

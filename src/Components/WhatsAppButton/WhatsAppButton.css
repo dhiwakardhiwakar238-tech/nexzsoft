@@ -13,6 +13,7 @@
   border-radius: 50%;
 
   background: #25d366;
+  
   color: white;
 
   text-decoration: none;
@@ -29,4 +30,8 @@
 
 .whatsapp-btn:hover {
   transform: scale(1.1);
+}
+
+body.chat-fullscreen .whatsapp-btn {
+  display: none !important;
 }

@@ -16,11 +16,14 @@ body,
 }
 
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #020617;
+  background: #ffffff;
+  color: #0f172a;
 }
 
 .app {
   width: 100%;
   min-height: 100vh;
+  background: #ffffff;
 }

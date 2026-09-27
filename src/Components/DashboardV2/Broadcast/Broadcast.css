@@ -1,0 +1,1724 @@
+/* =========================================================
+   BROADCAST PAGE
+   Enterprise SaaS Campaign Workspace
+   ========================================================= */
+
+.broadcast-page {
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 4px 2px 32px;
+
+    color: #0f172a;
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.broadcast-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    padding: 22px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.03),
+        0 8px 24px rgba(15, 23, 42, 0.035);
+}
+
+.broadcast-top > div:first-child {
+    min-width: 0;
+}
+
+.broadcast-top h2 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 23px;
+    line-height: 1.25;
+    font-weight: 750;
+
+    letter-spacing: -0.35px;
+}
+
+.broadcast-top p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.campaign-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.create-template-btn,
+.new-campaign-btn {
+    border: 1px solid transparent;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+.campaign-header-actions .create-template-btn,
+.campaign-header-actions .new-campaign-btn {
+    padding: 10px 16px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 4px 10px rgba(79, 70, 229, 0.16);
+}
+
+.campaign-header-actions .create-template-btn:hover,
+.campaign-header-actions .new-campaign-btn:hover {
+    background: #4338ca;
+
+    box-shadow:
+        0 6px 15px rgba(79, 70, 229, 0.20);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.broadcast-stats {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.broadcast-stat-card {
+    position: relative;
+
+    min-height: 92px;
+
+    box-sizing: border-box;
+
+    padding: 16px 18px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #6366f1;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.025),
+        0 5px 16px rgba(15, 23, 42, 0.025);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.broadcast-stat-card:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.055);
+}
+
+
+/* =========================================================
+   STAT DECORATION
+   ========================================================= */
+
+.broadcast-stat-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    right: -30px;
+    top: -30px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.045);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.stat-content {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
+   STAT VALUE
+   ========================================================= */
+
+.broadcast-stat-card h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    font-weight: 750;
+
+    letter-spacing: -0.45px;
+}
+
+
+/* =========================================================
+   STAT LABEL
+   ========================================================= */
+
+.broadcast-stat-card p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+    font-weight: 650;
+
+    letter-spacing: 0.05px;
+}
+
+
+/* =========================================================
+   STAT ACCENT COLORS
+   ========================================================= */
+
+/* Total Campaigns */
+.broadcast-stat-card {
+    border-left-color: #6366f1;
+}
+
+
+/* Delivered */
+.broadcast-stat-card.success {
+    border-left-color: #22c55e;
+}
+
+.broadcast-stat-card.success::after {
+    background: rgba(34, 197, 94, 0.055);
+}
+
+
+/* Read */
+.broadcast-stat-card.info {
+    border-left-color: #3b82f6;
+}
+
+.broadcast-stat-card.info::after {
+    background: rgba(59, 130, 246, 0.055);
+}
+
+
+/* Replies */
+.broadcast-stat-card.warning {
+    border-left-color: #f59e0b;
+}
+
+.broadcast-stat-card.warning::after {
+    background: rgba(245, 158, 11, 0.065);
+}
+
+
+/* =========================================================
+   MAIN CAMPAIGN WORKSPACE
+   ========================================================= */
+
+.broadcast-main {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(360px, 0.65fr);
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SHARED CARDS
+   ========================================================= */
+
+.campaign-card,
+.preview-card,
+.campaign-history,
+.broadcast-details {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.025),
+        0 8px 24px rgba(15, 23, 42, 0.035);
+}
+
+
+/* =========================================================
+   CAMPAIGN CARD
+   ========================================================= */
+
+.campaign-card {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   PREVIEW CARD
+   ========================================================= */
+
+.preview-card {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    position: sticky;
+
+    top: 18px;
+}
+
+.preview-heading {
+    margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.section-heading h3 {
+    margin: 0 0 4px;
+
+    color: #0f172a;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+
+    letter-spacing: -0.2px;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    margin: 0 0 17px 0;
+    padding: 0;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
+   FORM LABEL
+   ========================================================= */
+
+.form-group > label {
+    display: block;
+
+    margin: 8px 0 3px 0;
+
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    height: 42px;
+
+    margin-top: 1px;
+
+    padding: 11px 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #d7dee8;
+
+    border-radius: 8px;
+
+    color: #0f172a;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a0a9b8;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #c4ccd8;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.09);
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.form-group textarea {
+    min-height: 120px;
+    height: auto;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   AUDIENCE ROW
+   ========================================================= */
+
+.audience-row {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   AUDIENCE SELECT
+   ========================================================= */
+
+.audience-row select {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   RECIPIENT PREVIEW
+   ========================================================= */
+
+.audience-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-shrink: 0;
+
+    min-width: 170px;
+    height: 42px;
+
+    box-sizing: border-box;
+
+    padding: 0 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #d7dee8;
+
+    border-radius: 8px;
+
+    gap: 10px;
+}
+
+
+.audience-preview-label {
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.audience-preview-count {
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   AUDIENCE
+   ========================================================= */
+
+.audience-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.audience-row select {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.audience-preview {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 6px;
+
+    white-space: nowrap;
+}
+
+.audience-preview-label {
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.audience-preview-count {
+    color: #334155;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TEMPLATE VARIABLES
+   ========================================================= */
+
+.template-variables {
+    margin: 20px 0;
+
+    padding: 16px;
+
+    background: #fafbff;
+
+    border: 1px solid #e4e7ff;
+
+    border-radius: 10px;
+}
+
+.template-variables h3 {
+    margin: 0 0 4px;
+
+    color: #1e293b;
+
+    font-size: 14px;
+
+    font-weight: 750;
+}
+
+.variable-help {
+    margin: 0 0 15px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.variable-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 13px;
+}
+
+.variable-field label {
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.variable-field label span {
+    color: #94a3b8;
+
+    font-weight: 500;
+}
+
+.variable-field input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #d7dee8;
+
+    border-radius: 8px;
+
+    color: #0f172a;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.variable-field input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================================================
+   NO TEMPLATE VARIABLES
+   ========================================================= */
+
+.no-template-variables {
+    margin: 17px 0;
+
+    padding: 11px 13px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 8px;
+
+    color: #15803d;
+
+    font-size: 12px;
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   CAMPAIGN ACTIONS
+   ========================================================= */
+
+.campaign-actions {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin: 20px 0 12px;
+}
+
+.attach-btn,
+.schedule-btn {
+    min-height: 42px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    cursor: not-allowed;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
+
+.send-btn {
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 12px 17px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 13px rgba(79, 70, 229, 0.17);
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.send-btn:hover:not(:disabled) {
+    background: #4338ca;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(79, 70, 229, 0.22);
+}
+
+.send-btn:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.6;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   WHATSAPP PHONE
+   ========================================================= */
+
+.broadcast-phone {
+    width: 100%;
+
+    max-width: 330px;
+
+    height: 590px;
+
+    margin: 8px auto 0;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #17202b;
+
+    border: 1px solid #253242;
+
+    border-radius: 27px;
+
+    box-shadow:
+        0 16px 36px rgba(15, 23, 42, 0.17);
+}
+
+
+/* =========================================================
+   PHONE HEADER
+   ========================================================= */
+
+.broadcast-phone-header {
+    position: relative;
+
+    flex-shrink: 0;
+
+    padding: 14px 14px 13px;
+
+    background: #075e54;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    border-radius: 20px 20px 8px 8px;
+}
+
+.broadcast-phone-header::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: #25d366;
+}
+
+
+/* =========================================================
+   PHONE BODY
+   ========================================================= */
+
+.broadcast-phone-body {
+    flex: 1;
+
+    margin-top: 3px;
+
+    padding: 17px 12px;
+
+    background:
+        linear-gradient(
+            rgba(236, 229, 221, 0.96),
+            rgba(236, 229, 221, 0.96)
+        );
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+}
+
+.broadcast-phone-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.broadcast-phone-body::-webkit-scrollbar-thumb {
+    background: #c4bdb5;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   MESSAGE BUBBLE
+   ========================================================= */
+
+.broadcast-preview-message {
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 13px 11px;
+
+    background: #ffffff;
+
+    color: #111827 !important;
+
+    border-radius: 4px 12px 12px 12px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.10);
+}
+
+.broadcast-preview-message::after {
+    content: "";
+
+    position: absolute;
+
+    left: -6px;
+
+    top: 0;
+
+    border-top: 7px solid #ffffff;
+
+    border-left: 7px solid transparent;
+}
+
+.broadcast-preview-message *,
+.broadcast-preview-message p,
+.broadcast-preview-message span,
+.broadcast-preview-message div,
+.broadcast-preview-message strong,
+.broadcast-preview-message small {
+    color: #111827 !important;
+
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   PREVIEW BUTTONS
+   ========================================================= */
+
+.broadcast-preview-message button {
+    width: 100%;
+
+    margin-top: 7px;
+
+    padding: 8px 9px;
+
+    border: none;
+
+    border-top: 1px solid #edf0f2;
+
+    background: #ffffff !important;
+
+    color: #1677ff !important;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   CAMPAIGN HISTORY
+   ========================================================= */
+
+.campaign-history {
+    width: 100%;
+
+    padding: 21px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+}
+
+.history-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 16px;
+}
+
+.history-header h3 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 17px;
+
+    font-weight: 750;
+}
+
+.history-header button {
+    padding: 8px 13px;
+
+    border: 1px solid #dfe4ff;
+
+    background: #f7f8ff;
+
+    color: #4f46e5;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.history-header button:hover {
+    background: #eef2ff;
+
+    border-color: #c7d2fe;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.campaign-history table {
+    width: 100%;
+
+    min-width: 760px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+}
+
+.campaign-history th {
+    padding: 12px 13px;
+
+    background: #f8fafc;
+
+    color: #334155;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.55px;
+
+    border-top: 1px solid #edf1f5;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    white-space: nowrap;
+}
+
+.campaign-history th:first-child {
+    border-radius: 7px 0 0 7px;
+}
+
+.campaign-history th:last-child {
+    border-radius: 0 7px 7px 0;
+}
+
+.campaign-history td {
+    padding: 13px;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    vertical-align: middle;
+}
+
+.campaign-history tbody tr {
+    transition: background 0.15s ease;
+}
+
+.campaign-history tbody tr:hover {
+    background: #fafbff;
+}
+
+.campaign-history tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 92px;
+
+    padding: 4px 9px;
+
+    border: 1px solid transparent;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS — SUCCESS
+   ========================================================= */
+
+.status-success {
+    background: #ecfdf3;
+
+    border-color: #bbf7d0;
+
+    color: #15803d;
+}
+
+
+/* =========================================================
+   STATUS — PARTIAL
+   ========================================================= */
+
+.status-partial {
+    background: #fffbeb;
+
+    border-color: #fde68a;
+
+    color: #b45309;
+}
+
+
+/* =========================================================
+   STATUS — FAILED
+   ========================================================= */
+
+.status-failed {
+    background: #fef2f2;
+
+    border-color: #fecaca;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   STATUS — PENDING / NOT SENT
+   ========================================================= */
+
+.status-pending {
+    background: #f1f5f9;
+
+    border-color: #e2e8f0;
+
+    color: #475569;
+}
+
+
+/* =========================================================
+   STATUS — ZERO RECIPIENTS
+   ========================================================= */
+
+.status-empty {
+    background: #f8fafc;
+
+    border-color: #e2e8f0;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   TABLE ACTION
+   ========================================================= */
+
+.table-btn {
+    padding: 6px 11px;
+
+    border: 1px solid #dfe4ff;
+
+    background: #f7f8ff;
+
+    color: #4f46e5;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.table-btn:hover {
+    background: #4f46e5;
+
+    border-color: #4f46e5;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   EMPTY TABLE
+   ========================================================= */
+
+.campaign-history td[colspan] {
+    padding: 42px 20px;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.broadcast-details {
+    padding: 21px;
+
+    box-sizing: border-box;
+}
+
+.broadcast-details h3 {
+    margin: 0 0 14px;
+
+    color: #0f172a;
+
+    font-size: 17px;
+
+    font-weight: 750;
+}
+
+.broadcast-details > p {
+    display: inline-flex;
+
+    margin: 0 8px 14px 0;
+
+    padding: 7px 10px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 7px;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    font-weight: 650;
+}
+
+.broadcast-log {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    font-size: 12px;
+}
+
+.broadcast-log:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.18);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .broadcast-main {
+        grid-template-columns:
+            minmax(0, 1fr)
+            330px;
+    }
+
+    .broadcast-phone {
+        height: 570px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1050px
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .broadcast-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .broadcast-main {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-card {
+        position: relative;
+
+        top: auto;
+    }
+
+    .broadcast-phone {
+        max-width: 350px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .broadcast-page {
+        gap: 15px;
+
+        padding: 0 0 20px;
+    }
+
+
+    /* Header */
+
+    .broadcast-top {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 18px;
+    }
+
+    .broadcast-top h2 {
+        font-size: 20px;
+    }
+
+    .campaign-header-actions {
+        width: 100%;
+    }
+
+    .campaign-header-actions .create-template-btn,
+    .campaign-header-actions .new-campaign-btn {
+        width: 100%;
+    }
+
+
+    /* Statistics */
+
+    .broadcast-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .broadcast-stat-card {
+        min-height: 88px;
+
+        padding: 14px 15px;
+    }
+
+    .broadcast-stat-card h2 {
+        font-size: 23px;
+    }
+
+
+    /* Cards */
+
+    .campaign-card,
+    .preview-card,
+    .campaign-history,
+    .broadcast-details {
+        padding: 10px;
+
+        border-radius: 12px;
+    }
+
+
+    /* Campaign actions */
+
+    .campaign-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Audience */
+
+    .audience-row {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .audience-preview {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        justify-content: space-between;
+    }
+
+
+    /* Phone */
+
+    .broadcast-phone {
+        height: 550px;
+
+        max-width: 100%;
+    }
+
+
+    /* History */
+
+    .history-header {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .broadcast-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+    .broadcast-stat-card {
+        min-height: 82px;
+
+        padding: 13px 14px;
+    }
+
+    .broadcast-stat-card h2 {
+        font-size: 20px;
+    }
+
+    .broadcast-stat-card p {
+        font-size: 10px;
+    }
+
+
+    /* Audience */
+
+    .audience-preview {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    /* Phone */
+
+    .broadcast-phone {
+        height: 510px;
+    }
+
+
+    /* History */
+
+    .history-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 9px;
+    }
+
+    .history-header button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .broadcast-stat-card,
+    .send-btn,
+    .table-btn,
+    .campaign-header-actions .create-template-btn,
+    .campaign-header-actions .new-campaign-btn,
+    .history-header button {
+        transition: none;
+    }
+
+}
+
+/* =========================================================
+   WHATSAPP TEMPLATE PREVIEW BUTTONS
+========================================================= */
+
+.broadcast-preview-buttons {
+    width: 100%;
+    margin-top: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+    border-radius: 8px;
+
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* =========================================================
+   WHATSAPP PREVIEW BUTTON
+========================================================= */
+
+.broadcast-preview-buttons button {
+    width: 100%;
+    min-height: 40px;
+
+    padding: 9px 14px;
+    margin: 0;
+
+    border: none;
+    border-radius: 0;
+
+    background: #ffffff !important;
+
+    color: #00A884 !important;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 20px;
+    text-align: center;
+
+    box-sizing: border-box;
+
+    cursor: default;
+}
+
+
+/* Divider */
+
+.broadcast-preview-buttons button + button {
+    border-top: 1px solid #e5e7eb;
+}

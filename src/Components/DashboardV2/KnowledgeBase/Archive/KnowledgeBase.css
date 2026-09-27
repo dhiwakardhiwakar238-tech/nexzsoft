@@ -1,0 +1,334 @@
+.knowledge-page {
+
+    width: 100%;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.knowledge-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.knowledge-header h2 {
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #101828;
+
+}
+
+.knowledge-header p {
+
+    margin-top: 6px;
+
+    color: #667085;
+
+}
+
+.upload-btn {
+
+    border: none;
+
+    padding: 14px 26px;
+
+    border-radius: 12px;
+
+    background: #4F46E5;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.upload-btn:hover {
+
+    background: #4338CA;
+
+}
+
+.knowledge-table {
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+
+}
+
+.knowledge-table-header {
+
+    display: grid;
+
+    grid-template-columns: 3fr 1fr 1fr 1.5fr 1fr;
+
+    padding: 20px;
+
+    font-weight: 700;
+
+    background: #F8FAFC;
+
+    color: #344054;
+
+    border-bottom: 1px solid #E4E7EC;
+
+}
+
+.knowledge-empty {
+
+    padding: 80px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+.empty-icon {
+
+    font-size: 60px;
+
+}
+
+.knowledge-empty h3 {
+
+    color: #111827;
+
+}
+
+.knowledge-empty p {
+
+    color: #6B7280;
+
+}
+
+
+
+/* ==========================================
+DOCUMENT ROW
+========================================== */
+
+.knowledge-row {
+
+    display: grid;
+
+    grid-template-columns: 3fr 1fr 1fr 1.5fr 1fr;
+
+    align-items: center;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #EEF2F6;
+
+    transition: .25s;
+
+}
+
+.knowledge-row:hover {
+
+    background: #F8FAFC;
+
+}
+
+.knowledge-row span {
+
+    color: #374151;
+
+    font-size: 15px;
+
+}
+
+.knowledge-row span:first-child {
+
+    font-weight: 600;
+
+    color: #111827;
+
+}
+
+/* ==========================================
+STATUS
+========================================== */
+
+.status-ready {
+
+    color: #16A34A;
+
+    font-weight: 700;
+
+}
+
+.status-processing {
+
+    color: #F59E0B;
+
+    font-weight: 700;
+
+}
+
+.status-failed {
+
+    color: #DC2626;
+
+    font-weight: 700;
+
+}
+
+/* ==========================================
+ACTIONS
+========================================== */
+
+.knowledge-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.reindex-btn {
+
+    border: none;
+
+    background: #EEF2FF;
+
+    color: #4338CA;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+.reindex-btn:hover {
+
+    background: #4338CA;
+
+    color: white;
+
+}
+
+.delete-btn {
+
+    border: none;
+
+    background: #FEE2E2;
+
+    color: #DC2626;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+.delete-btn:hover {
+
+    background: #DC2626;
+
+    color: white;
+
+}
+
+
+/* =======================================
+UPLOAD PROGRESS
+======================================= */
+
+.upload-progress {
+
+    margin-top: 20px;
+
+    width: 320px;
+
+}
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: #E5E7EB;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.progress-fill {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #4F46E5;
+
+    animation: loading 1.2s linear infinite;
+
+}
+
+.upload-progress p {
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: #475467;
+
+}
+
+@keyframes loading {
+
+    0% {
+
+        transform: translateX(-100%);
+
+    }
+
+    100% {
+
+        transform: translateX(100%);
+
+    }
+
+}

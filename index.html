@@ -2,10 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Nexzsoft</title>
+
+    <!-- Standard SEO description -->
+    <meta
+      name="description"
+      content="Nexzsoft is a customer engagement platform that enables businesses to communicate with their customers through the WhatsApp API, with AI-powered replies to automate and personalize conversations."
+    />
+
+    <!-- Open Graph metadata for link previews -->
+    <meta property="og:title" content="Nexzsoft" />
+    <meta
+      property="og:description"
+      content="Nexzsoft is a customer engagement platform that enables businesses to communicate with their customers through the WhatsApp API, with AI-powered replies to automate and personalize conversations."
+    />
+    <meta
+      property="og:image"
+      content="https://www.nexzsoft.com/og/nexzsoft-preview.jpeg"
+    />
+    <meta property="og:url" content="https://www.nexzsoft.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nexzsoft" />
+
+    <!-- Structured Data for Google Sitelinks & Brand Knowledge -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.nexzsoft.com/#organization",
+          "name": "Nexzsoft",
+          "url": "https://www.nexzsoft.com/",
+          "logo": "https://www.nexzsoft.com/favicon.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.nexzsoft.com/#website",
+          "url": "https://www.nexzsoft.com/",
+          "name": "Nexzsoft",
+          "publisher": {
+            "@id": "https://www.nexzsoft.com/#organization"
+          },
+          "description": "Nexzsoft brings AI reply, automation, empowered customer conversations, and business insights together in one unified platform.",
+          "hasPart": [
+            {
+              "@type": "WebPage",
+              "name": "About Nexzsoft",
+              "url": "https://www.nexzsoft.com/about",
+              "description": "We believe the power of AI should be for everyone. Nexzsoft makes AI simple, practical, and accessible—helping businesses bring intelligent conversations and automation into their everyday customer interactions."
+            },
+            {
+              "@type": "WebPage",
+              "name": "Nexzsoft Solutions",
+              "url": "https://www.nexzsoft.com/solutions",
+              "description": "Discover Nexzsoft’s AI-powered customer engagement solutions that bring intelligent replies, automation, and personalized conversations across WhatsApp and multiple communication channels, helping businesses save time, improve customer experiences, and turn conversations into opportunities."
+            },
+            {
+              "@type": "WebPage",
+              "name": "Pricing",
+              "url": "https://www.nexzsoft.com/pricing",
+              "description": "Pay for what you use, grow as you grow. Nexzsoft’s flexible usage-based pricing gives businesses access to powerful AI and customer engagement tools without the burden of fixed plans or unnecessary costs."
+            },
+            {
+              "@type": "WebPage",
+              "name": "Contact Us",
+              "url": "https://www.nexzsoft.com/contact",
+              "description": "We’re always here to hear from you. Whether you have a question, need support, or want to explore Nexzsoft, our team is ready to connect, refine what you already do, and help unlock greater possibilities for your business."
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

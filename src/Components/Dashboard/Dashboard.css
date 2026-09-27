@@ -147,11 +147,8 @@ body {
 
 .chat-messages {
   flex: 1;
-  padding: 15px;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding: 15px;
 }
 
 .message {
@@ -281,4 +278,76 @@ textarea {
 .crm-column {
     flex: 0 0 280px;
     min-width: 280px;
+}
+
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fullscreen-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.fullscreen-btn:hover {
+  color: #25d366;
+}
+
+/* .chat-section.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: white;
+} */
+
+.chat-section.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 9999;
+
+  background: #071225;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-section.fullscreen .chat-header {
+  flex-shrink: 0;
+}
+
+.chat-section.fullscreen .chat-messages {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-section.fullscreen .chat-input {
+  flex-shrink: 0;
+}
+
+.chat-section.fullscreen ~ .chatbot-widget {
+  display: none !important;
+}
+
+.chat-fullscreen .chat-button,
+.chat-fullscreen .chat-box {
+  display: none !important;
+}
+
+.chat-section.fullscreen ~ .chat-button,
+.chat-section.fullscreen ~ .chat-box {
+  display: none !important;
 }
